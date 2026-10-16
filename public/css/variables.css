@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Bodomgul — dizayn tokenlari
+   Neytral iliq palitra + oltin urg'u (safiabakery.uz uslubidagi tizim)
+   ========================================================================== */
+
+:root {
+    /* Ranglar */
+    --color-bg: #F9F8F6;
+    --color-surface: #FFFFFF;
+    --color-card-bg: #F9F8F6;
+    --color-card-hover: #F3F0EA;
+    --color-tint: #F5F3EF;
+    --color-text: #1A1A1A;
+    --color-muted: #737373;
+    --color-inactive: #A1A1A1;
+    --color-border: #E9E6E0;
+    --color-border-strong: #DDD8CE;
+
+    /* Brend oltini (uch xil vazifada) */
+    --color-brand-gold: #DCC38B;        /* to'ldirish, bezak, katta aksent */
+    --color-brand-gold-dark: #B99A5C;   /* ikonka va katta raqamlar */
+    --color-brand-gold-ink: #8A6D33;    /* oq fonda kichik matn */
+    --color-brand-gold-soft: #F6EEDD;
+    --color-brand-gold-line: rgba(220, 195, 139, 0.55);
+    --color-brand-gold-gradient: linear-gradient(135deg, #FEF5E6 0%, #D5B26F 100%);
+    --color-gold-quote-gradient: linear-gradient(90deg, rgba(254, 245, 230, 0.78), rgba(213, 178, 111, 0.72));
+
+    /* Brend qorasi */
+    --color-brand: #1A1A1A;
+    --color-brand-dark: #101010;
+    --color-brand-soft: #F9F8F6;
+
+    /* Aliaslar (ilova bo'ylab ishlatiladi) */
+    --color-rose: #DCC38B;
+    --color-rose-soft: #F6EEDD;
+    --color-almond: #E8E2D6;
+    --color-almond-soft: #F4F0E8;
+    --color-cream: #FBF9F4;
+    --color-caramel: #A98A52;
+    --color-footer: #FFFFFF;
+
+    --color-success: #2F7D4F;
+    --color-success-soft: #EAF4EC;
+    --color-danger: #C6403C;
+    --color-danger-soft: #FBECEB;
+
+    /* Tipografiya — geometrik sans (Safia'dagi Circe ruhiga yaqin) */
+    --font-display: 'Onest', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Onest', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+    --text-xs: 0.8125rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+    --text-3xl: clamp(2rem, 1.55rem + 1.7vw, 2.5rem);
+    --text-4xl: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);
+
+    /* Bo'shliqlar */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4.5rem;
+
+    /* Shakl va o'lchamlar */
+    --container-width: 1344px;
+    --container-padding: 1rem;
+    --radius-card: 20px;
+    --radius-card-lg: 30px;
+    --radius-media: 14px;
+    --radius-button: 16px;
+    --radius-input: 16px;
+    --radius-pill: 999px;
+
+    /* Soyalar — Safia uslubida deyarli tekis yuzalar */
+    --shadow-soft: 0 1px 2px rgba(26, 26, 26, 0.03);
+    --shadow-card: 0 10px 30px rgba(26, 26, 26, 0.07);
+    --shadow-hover: 0 8px 24px rgba(26, 26, 26, 0.08);
+    --shadow-elevated: 0 12px 34px rgba(26, 26, 26, 0.16);
+
+    /* O'tishlar */
+    --transition-fast: 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Z-index */
+    --z-back: -1;
+    --z-base: 1;
+    --z-header: 50;
+    --z-overlay: 55;
+    --z-drawer: 60;
+    --z-modal: 70;
+    --z-toast: 80;
+}
+
+/* Kichik ekranlarda yumshoqroq burchaklar (Safia: 16px → 20px) */
+
+@media (min-width: 640px) {
+    :root {
+        --container-padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --container-padding: 3rem;
+        --radius-media: 20px;
+        --radius-button: 20px;
+    }
+}

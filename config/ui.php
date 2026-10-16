@@ -1,0 +1,270 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Interfeys matnlari lug'ati
+|--------------------------------------------------------------------------
+|
+| Bu fayldagi matnlar saytning boshlang'ich (o'zbekcha) ko'rinishi.
+| Admin panel har bir til uchun bu matnlarni o'zgartirishi mumkin
+| (ui_translations jadvali orqali). Kalit formati: "guruh.nom".
+|
+*/
+
+return [
+    'groups' => [
+        'nav' => 'Menyu va navigatsiya',
+        'header' => 'Sarlavha (header)',
+        'footer' => 'Pastki qism (footer)',
+        'common' => 'Umumiy tugma va yozuvlar',
+        'home' => 'Bosh sahifa',
+        'catalog' => 'Katalog sahifasi',
+        'product' => 'Mahsulot sahifasi',
+        'news' => 'Yangiliklar sahifasi',
+        'cart' => 'Savatcha',
+        'favorites' => 'Sevimlilar',
+        'branches' => 'Filiallar sahifasi',
+        'about' => 'Biz haqimizda sahifasi',
+        'careers' => 'Karyera sahifasi',
+        'contacts' => 'Kontaktlar sahifasi',
+        'form' => 'Forma xabarlari',
+        'js' => 'JavaScript xabarlari',
+        'meta' => 'SEO sarlavhalar',
+        'errors' => 'Xatolik sahifalari',
+    ],
+
+    'strings' => [
+        // Menyu
+        'nav.about' => 'Biz haqimizda',
+        'nav.catalog' => 'Katalog',
+        'nav.news' => 'Yangiliklar va aksiyalar',
+        'nav.branches' => 'Lokatsiyalar',
+        'nav.careers' => 'Karyera',
+        'nav.catering' => 'Keytering',
+
+        // Header
+        'header.skip_link' => 'Asosiy kontentga o‘tish',
+        'header.city' => 'Toshkent',
+        'header.search' => 'Qidiruv',
+        'header.search_placeholder' => 'Mahsulot nomini kiriting...',
+        'header.search_button' => 'Qidirish',
+        'header.search_label' => 'Mahsulot qidirish',
+        'header.language' => 'Til',
+        'header.favorites' => 'Sevimlilar',
+        'header.cart' => 'Savatcha',
+        'header.menu' => 'Menyu',
+        'header.close_menu' => 'Menyuni yopish',
+
+        // Footer
+        'footer.about_title' => 'Kompaniya haqida',
+        'footer.links_title' => 'Foydali havolalar',
+        'footer.contacts_title' => 'Kontaktlar',
+        'footer.app_title' => 'Mobil ilova',
+        'footer.app_text' => 'Ulanish oson: Ilovamizni o‘rnatish uchun telefoningiz kamerasini oching yoki do‘kondan yuklab oling.',
+        'footer.loyalty' => 'Sodiqlik dasturi',
+        'footer.faq' => 'Savol-javoblar',
+        'footer.privacy' => 'Maxfiylik siyosati',
+        'footer.demo_note' => 'Portfolio Demo — Safia Bakery uslubida yaratilgan.',
+
+        // Umumiy
+        'common.currency' => 'so‘m',
+        'common.home' => 'Bosh sahifa',
+        'common.view_all' => 'Hammasini ko‘rish',
+        'common.more' => 'Batafsil',
+        'common.view' => 'Ko‘rish',
+        'common.demo_data' => 'Namunaviy demo ma’lumot',
+        'common.breadcrumb' => 'Sahifa yo‘li',
+
+        // Bosh sahifa
+        'home.hero.prev' => 'Oldingi slayd',
+        'home.hero.next' => 'Keyingi slayd',
+        'home.catalog.title' => 'Katalog',
+        'home.catalog.prev' => 'Oldingi kategoriyalar',
+        'home.catalog.next' => 'Keyingi kategoriyalar',
+        'home.app.title' => 'Mobil ilovaga ro‘yxatdan o‘ting va birinchi xaridda kofe sovg‘a oling!',
+        'home.app.text' => 'Ulanish oson: ilovamizni o‘rnatish uchun QR-kodga telefon kamerasini yaqinlashtiring yoki ilovalar do‘konidan yuklab oling.',
+        'home.app.qr_title' => 'QR-kod',
+        'home.app.qr_hint' => 'Kamerani qarating',
+        'home.products.title' => 'Sevimli mahsulotlar',
+        'home.products.subtitle' => 'Har kuni yangi pishirilgan nafis desertlar va shirinliklar',
+        'home.join.title' => 'Oilamizda',
+        'home.join.title_accent' => 'bo‘ling',
+        'home.join.badge_title' => '1 200+ xodim',
+        'home.join.badge_text' => 'Ahil va mehmondo‘st jamoa',
+        'home.join.perk1_title' => 'Karyera o‘sishi',
+        'home.join.perk1_text' => 'Qandolatchilik akademiyamizda bepul ta’lim, mahorat darslari va tezkor martaba yuksalishi.',
+        'home.join.perk2_title' => 'Issiq tushlik va qulaylik',
+        'home.join.perk2_text' => 'Kunlik bepul 2 mahal to‘yimli issiq ovqat, chiroyli korporativ forma va qulay ish grafigi.',
+        'home.join.perk3_title' => 'Rasmiy bandlik',
+        'home.join.perk3_text' => 'Mehnat kodeksi bo‘yicha to‘liq rasmiy ishga qabul qilish, o‘z vaqtida maosh va mukofotlar.',
+        'home.join.quote' => '«Siz ham qandolatchilik san’atini sevasizmi? Bizning safimizga qo‘shiling — birgalikda yangi shirinliklar yaratamiz!»',
+        'home.join.cta' => 'Ochiq vakansiyalarni ko‘rish',
+        'home.news.title' => 'Yangiliklar va aksiyalar',
+        'home.news.subtitle' => 'So‘nggi voqealar, chegirmalar va yangiliklar',
+        'home.news.view_all' => 'Barcha yangiliklar',
+        'home.branches.title' => 'Lokatsiyalar va Filiallar',
+        'home.branches.subtitle' => 'Har kuni 08:00 dan 23:00 gacha sizni kutamiz',
+        'home.branches.view_all' => 'Barcha filiallar',
+        'home.promo_label' => 'Mavsumiy aksiya',
+
+        // Katalog
+        'catalog.title' => 'Katalog',
+        'catalog.description' => 'Bodomgul’ning barcha mahsulotlari: tortlar, pishiriqlar, kruassanlar, pechenye, shirinlik to‘plamlari va ichimliklar.',
+        'catalog.search_placeholder' => 'Mahsulot nomini kiriting...',
+        'catalog.search_category_placeholder' => 'Shu kategoriyadan qidirish...',
+        'catalog.search_label' => 'Kategoriya ichidan qidirish',
+        'catalog.filter_label' => 'Kategoriya bo‘yicha filter',
+        'catalog.sort_label' => 'Tartiblash',
+        'catalog.sort_default' => 'Tavsiya etilgan',
+        'catalog.sort_price_asc' => 'Avval arzonlari',
+        'catalog.sort_price_desc' => 'Avval qimmatlari',
+        'catalog.sort_name_asc' => 'Nomi bo‘yicha',
+        'catalog.all' => 'Barchasi',
+        'catalog.found' => ':count ta mahsulot topildi',
+        'catalog.found_suffix' => 'ta mahsulot topildi',
+        'catalog.empty_title' => 'Mahsulot topilmadi',
+        'catalog.empty_text' => 'Qidiruv so‘zini o‘zgartiring yoki filtrlarni tozalang.',
+        'catalog.empty_category_text' => 'Qidiruv so‘zini o‘zgartirib ko‘ring yoki boshqa kategoriyani tanlang.',
+        'catalog.clear_filters' => 'Filtrlarni tozalash',
+        'catalog.clear_search' => 'Qidiruvni tozalash',
+
+        // Mahsulot
+        'product.new_badge' => 'Yangilik',
+        'product.add_to_cart' => 'Savatchaga',
+        'product.details' => 'Batafsil',
+        'product.favorite_add' => ':name — sevimlilarga qo‘shish',
+        'product.cart_add' => ':name — savatchaga qo‘shish',
+        'product.category_label' => 'Kategoriya',
+        'product.weight_label' => 'Vazn / hajm',
+        'product.composition_label' => 'Tarkib',
+        'product.status_label' => 'Holat',
+        'product.weight_unit' => '/ :weight',
+        'product.qty_label' => 'Miqdor',
+        'product.qty_decrease' => 'Miqdorni kamaytirish',
+        'product.qty_increase' => 'Miqdorni oshirish',
+        'product.add_to_cart_long' => 'Savatchaga qo‘shish',
+        'product.favorite_long' => 'Sevimlilarga',
+        'product.demo_alert' => 'Bu portfolio demo sahifa: narx va mavjudlik namunaviy, buyurtma yuborilmaydi. Savatcha brauzeringizda saqlanadi.',
+        'product.related_title' => 'O‘xshash mahsulotlar',
+        'product.related_subtitle' => ':category toifasidagi boshqa shirinliklar',
+
+        // Yangiliklar
+        'news.title' => 'Yangiliklar va aksiyalar',
+        'news.description' => 'Safia va Bodomgul’dagi yangiliklar, mavsumiy kolleksiyalar va e’lonlar.',
+        'news.back' => 'Barcha yangiliklar',
+        'news.related_eyebrow' => 'Yana o‘qish',
+        'news.related_title' => 'Boshqa yangiliklar',
+        'news.share_label' => 'Ulashish',
+
+        // Savatcha
+        'cart.title' => 'Savatcha',
+        'cart.description' => 'Savatchangiz brauzerda (localStorage) saqlanadi. Bu portfolio demo — buyurtma va to‘lov yuborilmaydi.',
+        'cart.noscript' => 'Savatcha JavaScript orqali ishlaydi. JavaScript o‘chirilgan bo‘lsa, mahsulotlarni ko‘rish va boshqarish mumkin emas.',
+        'cart.unit_price' => ':price / :weight',
+        'cart.row_total' => 'Jami',
+        'cart.remove' => ':name — savatchadan o‘chirish',
+        'cart.empty_title' => 'Savatchangiz bo‘sh',
+        'cart.empty_text' => 'Katalogdan o‘zingizga yoqqan pishiriq va shirinliklarni tanlang.',
+        'cart.go_catalog' => 'Katalogga o‘tish',
+        'cart.summary_title' => 'Buyurtma xulosasi',
+        'cart.items_count' => 'Mahsulotlar soni',
+        'cart.items_count_value' => ':count ta',
+        'cart.items_suffix' => 'ta',
+        'cart.subtotal' => 'Oraliq summa',
+        'cart.delivery' => 'Yetkazib berish',
+        'cart.delivery_demo' => 'Hisoblanmaydi (demo)',
+        'cart.total' => 'Jami',
+        'cart.note' => 'Bu portfolio demo: to‘lov, yetkazib berish va buyurtma yuborish mavjud emas.',
+        'cart.clear' => 'Savatchani bo‘shatish',
+        'cart.continue' => 'Xaridni davom ettirish',
+
+        // Sevimlilar
+        'favorites.title' => 'Sevimlilar',
+        'favorites.description' => 'Sevimlilar ro‘yxati brauzeringizda (localStorage) saqlanadi — saytga qaytganingizda ham joyida bo‘ladi.',
+        'favorites.noscript' => 'Sevimlilar JavaScript orqali ishlaydi. JavaScript o‘chirilgan bo‘lsa, tanlangan mahsulotlarni ko‘rish mumkin emas.',
+        'favorites.count' => ':count ta sevimli mahsulot',
+        'favorites.count_suffix' => 'ta sevimli mahsulot',
+        'favorites.empty_text_alt' => 'Katalogdagi yurakcha tugmasi orqali mahsulotlarni sevimlilarga qo‘shishingiz mumkin.',
+        'favorites.empty_title' => 'Sevimlilar ro‘yxati bo‘sh',
+        'favorites.empty_text' => 'Katalogdan o‘zingizga yoqqan mahsulotlarni belgilang — ular shu yerda saqlanadi.',
+
+        // Filiallar
+        'branches.title' => 'Lokatsiyalar va Filiallar',
+        'branches.description' => 'Toshkent shahridagi Safia & Bodomgul filiallarini toping: manzil, telefon va ish vaqti.',
+        'branches.search_placeholder' => 'Filial nomi, tuman yoki manzil...',
+        'branches.search_label' => 'Filial qidirish',
+        'branches.found' => ':count ta filial topildi',
+        'branches.found_suffix' => 'ta filial topildi',
+        'branches.empty_title' => 'Filial topilmadi',
+        'branches.empty_text' => 'Boshqa nom, tuman yoki manzil bilan qidirib ko‘ring.',
+        'branches.map_link' => 'Xaritada ko‘rish',
+        'branches.demo_badge' => 'Demo',
+
+        // Biz haqimizda
+        'about.title' => 'Biz haqimizda',
+        'about.description' => 'Hammasi buvimning mehr bilan pishirilgan shirinliklaridan boshlandi...',
+        'about.view_catalog' => 'Katalogni ko‘rish',
+        'about.values_title' => 'Qadriyatlar — Nimaga ishonamiz?',
+        'about.values_subtitle' => 'Har bir faoliyatimiz va mahsulotimiz zamirida yotgan tamoyillar',
+
+        // Karyera
+        'careers.title' => 'Karyera',
+        'careers.meta_description' => 'Safia va Bodomgul qandolatchilik tarmog‘ida karyera: ochiq vakansiyalar, do‘stona jamoa, qulay ish sharoitlari.',
+        'careers.vacancies_button' => 'Ochiq vakansiyalar',
+        'careers.hr_bot' => 'HR Telegram bot',
+        'careers.apply' => 'Bog‘lanish',
+        'careers.vacancies_count' => ':count ta vakansiya',
+        'careers.vacancies_count_suffix' => 'ta vakansiya',
+
+        // Kontaktlar
+        'contacts.title' => 'Kontaktlar & Keytering',
+        'contacts.description' => 'Savollar, buyurtmalar, banket va keytering xizmati bo‘yicha biz bilan bog‘laning.',
+        'contacts.phone_title' => 'Yagona aloqa markazi',
+        'contacts.email_title' => 'Elektron pochta',
+        'contacts.address_title' => 'Bosh ofis',
+        'contacts.hours_title' => 'Ish vaqti',
+        'contacts.view_branches' => 'Filiallarni ko‘rish',
+        'contacts.go_catalog' => 'Katalogga o‘tish',
+        'contacts.name_label' => 'Ismingiz',
+        'contacts.contact_label' => 'Telefon yoki email',
+        'contacts.message_label' => 'Xabar',
+        'contacts.form_submit' => 'Xabar yuborish (demo)',
+
+        // Forma xatolari va xabarlari
+        'form.name_required' => 'Ismingizni kiriting.',
+        'form.name_min' => 'Ism kamida 2 ta belgidan iborat bo‘lishi kerak.',
+        'form.name_max' => 'Ism 80 ta belgidan oshmasligi kerak.',
+        'form.contact_required' => 'Bog‘lanish uchun telefon yoki email kiriting.',
+        'form.contact_min' => 'Bog‘lanish ma’lumoti juda qisqa.',
+        'form.contact_max' => 'Bog‘lanish ma’lumoti 120 ta belgidan oshmasligi kerak.',
+        'form.message_required' => 'Xabar matnini kiriting.',
+        'form.message_min' => 'Xabar kamida 10 ta belgidan iborat bo‘lishi kerak.',
+        'form.message_max' => 'Xabar 2000 ta belgidan oshmasligi kerak.',
+        'form.demo_notice' => 'Rahmat, :name! Bu portfolio demo formasi — xabaringiz haqiqiy manzilga yuborilmadi va saqlanmadi.',
+        'form.check_fields' => 'Iltimos, quyidagilarni tekshiring:',
+
+        // JavaScript xabarlari
+        'js.added_to_cart' => 'Savatga qo‘shildi',
+        'js.removed_from_cart' => 'Savatdan olib tashlandi',
+        'js.cart_cleared' => 'Savatcha bo‘shatildi',
+        'js.added_to_favorites' => 'Sevimlilarga qo‘shildi',
+        'js.removed_from_favorites' => 'Sevimlilardan olib tashlandi',
+        'js.filters_cleared' => 'Filtrlarni tozaladik',
+        'js.nothing_found' => 'Hech narsa topilmadi',
+        'js.products_found' => ':count ta mahsulot',
+        'js.branches_found' => ':count ta filial',
+        'js.cart_aria' => 'Savatcha, :count ta mahsulot',
+        'js.favorites_aria' => 'Sevimlilar, :count ta mahsulot',
+        'js.items_suffix' => 'ta',
+
+        // SEO sarlavhalar
+        'meta.home_title' => 'Bodomgul — qandolat va novvoyxona',
+        'meta.home_description' => 'Bodomgul — bodom guli ilhomidagi tortlar, kruassanlar, pechenye va shirinlik to‘plamlari. Safia Bakery uslubidagi portfolio sayti.',
+
+        // Xatolik sahifalari
+        'errors.not_found_title' => 'Kechirasiz, bu sahifa topilmadi',
+        'errors.not_found_text' => 'Sahifa ko‘chirilgan yoki manzil noto‘g‘ri kiritilgan bo‘lishi mumkin. Quyidagi havolalar orqali davom etishingiz mumkin.',
+        'errors.server_title' => 'Serverda kutilmagan xatolik yuz berdi',
+        'errors.server_text' => 'Muammo vaqtincha bo‘lishi mumkin. Birozdan so‘ng qayta urinib ko‘ring yoki bosh sahifaga qaytib davom eting.',
+    ],
+];

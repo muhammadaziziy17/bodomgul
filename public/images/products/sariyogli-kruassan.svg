@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs>
+<linearGradient id="pskbg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F6F0E5"/><stop offset="1" stop-color="#E9E0CF"/>
+</linearGradient>
+<radialGradient id="pskglow" cx="0.3" cy="0.08" r="1.05">
+<stop offset="0" stop-color="#FFFDF6" stop-opacity="0.85"/>
+<stop offset="0.55" stop-color="#FFFDF6" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="pskvig" cx="0.5" cy="0.52" r="0.85">
+<stop offset="0.55" stop-color="#3A2C1C" stop-opacity="0"/>
+<stop offset="1" stop-color="#3A2C1C" stop-opacity="0.1"/>
+</radialGradient>
+<linearGradient id="psksd" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0.45" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="psksh" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
+<stop offset="0.35" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.68" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="pskgl" x1="0.2" y1="0" x2="0.55" y2="1">
+<stop offset="0" stop-color="#FFF6E2"/>
+<stop offset="0.15" stop-color="#EDD3A5"/>
+<stop offset="1" stop-color="#DCBB80"/>
+</linearGradient>
+<filter id="psksoft" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="16"/>
+</filter>
+<filter id="psksoft2" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="7"/>
+</filter>
+<filter id="psknoise">
+<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.3 0.3 0.3 0 0"/>
+</filter>
+</defs>
+<rect width="1200" height="900" fill="url(#pskbg)"/>
+<rect width="1200" height="900" fill="url(#pskglow)"/>
+
+<rect x="0" y="594" width="1200" height="306" fill="#B99B72" opacity="0.2"/>
+<rect x="0" y="594" width="1200" height="3" fill="#8A6D45" opacity="0.14"/>
+<ellipse cx="600" cy="600" rx="744" ry="26" fill="#7A5C39" opacity="0.1" filter="url(#psksoft)"/>
+
+<ellipse cx="600" cy="682.24" rx="317.52" ry="50.839999999999996" fill="#2E2215" opacity="0.13" filter="url(#psksoft)"/>
+<ellipse cx="600" cy="662" rx="319.14" ry="77.89999999999999" fill="#E9E1D2"/><ellipse cx="600" cy="662" rx="319.14" ry="77.89999999999999" fill="url(#psksd)"/>
+<ellipse cx="600" cy="654" rx="324" ry="82" fill="#FFFFFF"/><ellipse cx="600" cy="654" rx="324" ry="82" fill="url(#psksd)"/>
+<ellipse cx="600" cy="658" rx="291.6" ry="70.52" fill="#FDFBF6"/><ellipse cx="600" cy="658" rx="291.6" ry="70.52" fill="url(#psksd)"/>
+<ellipse cx="600" cy="658" rx="291.6" ry="70.52" fill="none" stroke="#E2D8C4" stroke-width="2" opacity="0.7"/>
+<g transform="translate(600 618) scale(1.42)">
+<path d="M -150 -4 Q 0 36 150 -4 Q 116 -62 80 -44 Q 40 -24 8 -46 Q 0 -74 -8 -46 Q -40 -24 -80 -44 Q -116 -62 -150 -4 Z" fill="url(#pskgl)"/>
+<path d="M -150 -4 Q 0 36 150 -4 Q 116 -62 80 -44 Q 40 -24 8 -46 Q 0 -74 -8 -46 Q -40 -24 -80 -44 Q -116 -62 -150 -4 Z" fill="url(#psksd)"/>
+<g stroke="#A9763B" stroke-width="5" fill="none" opacity="0.34" stroke-linecap="round">
+<path d="M -40 -28 Q -36 2 -27 15"/>
+<path d="M 40 -28 Q 36 2 27 15"/>
+</g>
+<g stroke="#A9763B" stroke-width="4" fill="none" opacity="0.28" stroke-linecap="round">
+<path d="M -118 -14 Q -132 -26 -142 -34"/>
+<path d="M 118 -14 Q 132 -26 142 -34"/>
+</g>
+<ellipse cx="0" cy="-52" rx="38" ry="10" fill="#FFF3D9" opacity="0.3"/>
+<path d="M -128 -10 Q 0 20 128 -10" stroke="#A9763B" stroke-width="4" fill="none" opacity="0.22" stroke-linecap="round"/>
+
+</g>
+<g transform="translate(918 552) rotate(30) scale(0.8)" opacity="0.95">
+<path d="M 0 60 C 6 30 4 10 0 -10" stroke="#B99A5C" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g transform="translate(0 -22)">
+<path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(0)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(72)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(144)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(216)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(288)"/>
+<circle r="7" fill="#3B2A16"/>
+</g>
+<path d="M -4 22 q -18 -4 -24 -18 q 16 0 24 12 Z" fill="#95A472" opacity="0.9"/>
+<path d="M 4 40 q 18 -2 26 -16 q -18 -2 -26 10 Z" fill="#95A472" opacity="0.75"/>
+</g>
+
+<rect width="1200" height="900" fill="url(#pskvig)"/>
+<rect width="1200" height="900" filter="url(#psknoise)" opacity="0.12"/>
+</svg>

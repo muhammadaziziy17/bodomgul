@@ -1,0 +1,1456 @@
+/* ==========================================================================
+   Bodomgul — komponentlar: tugma, badge, chip, karta, forma, toast
+   Safia uslubidagi "pill" tilga asoslangan
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tugmalar
+   -------------------------------------------------------------------------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: var(--radius-button);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    transition: color var(--transition-fast), background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn--sm {
+    padding: 0.55rem 1.1rem;
+    font-size: var(--text-xs);
+}
+
+.btn--lg {
+    padding: 0.95rem 1.75rem;
+    font-size: var(--text-md);
+}
+
+.btn--block {
+    width: 100%;
+}
+
+.btn--primary {
+    background-color: var(--color-brand);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-brand-dark);
+    color: #fff;
+}
+
+.btn--secondary {
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-card-hover);
+    color: var(--color-brand-gold-ink);
+}
+
+.btn--light {
+    background-color: #ffffff;
+    color: var(--color-text);
+}
+
+.btn--light:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+.btn--outline-light {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.btn--outline-light:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--color-text);
+}
+
+.btn--ghost {
+    padding-inline: 1rem;
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.btn--ghost:hover {
+    background-color: var(--color-card-bg);
+    color: var(--color-brand-gold-ink);
+}
+
+/* Dumaloq icon tugma (slayder strelkalari va h.k.) */
+
+.round-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-button);
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+    font-size: 1.15rem;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.round-btn:hover {
+    background-color: var(--color-card-hover);
+    color: var(--color-brand-gold-ink);
+}
+
+.round-btn:active {
+    transform: translateY(1px);
+}
+
+.round-btn[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Badge va chip
+   -------------------------------------------------------------------------- */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.32rem 0.7rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.badge--brand {
+    background-color: var(--color-brand);
+    color: #fff;
+}
+
+.badge--soft {
+    background-color: var(--color-card-hover);
+    color: var(--color-text);
+}
+
+.badge--success {
+    background-color: var(--color-success-soft);
+    color: var(--color-success);
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 1.1rem;
+    border: 0;
+    border-radius: var(--radius-button);
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.chip:hover {
+    background-color: var(--color-card-hover);
+    color: var(--color-brand-gold-ink);
+}
+
+.chip.is-active {
+    background-color: var(--color-brand);
+    color: #fff;
+}
+
+.chip__count {
+    padding: 0.08rem 0.5rem;
+    border-radius: var(--radius-pill);
+    background-color: rgba(26, 26, 26, 0.07);
+    font-size: var(--text-xs);
+}
+
+.chip.is-active .chip__count {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Pill badge (yorliq) */
+
+.pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.95rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.pill-badge--gold {
+    background-color: var(--color-brand-gold-soft);
+    color: var(--color-brand-gold-ink);
+}
+
+.pill-badge--white {
+    background-color: #ffffff;
+    color: var(--color-brand-gold-ink);
+}
+
+.pill-badge--plain {
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+}
+
+.pill-badge--on-dark {
+    background-color: rgba(220, 195, 139, 0.16);
+    border: 1px solid rgba(220, 195, 139, 0.4);
+    color: var(--color-brand-gold);
+}
+
+/* --------------------------------------------------------------------------
+   Section title (eski sahifalar uchun)
+   -------------------------------------------------------------------------- */
+
+.section-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.section-title__eyebrow {
+    margin-bottom: 0.35rem;
+    color: var(--color-brand-gold-ink);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.section-title__heading {
+    font-size: var(--text-2xl);
+}
+
+.section-title__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.section-title__link:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Feature kartalar (qadriyatlar, karyera afzalliklari)
+   -------------------------------------------------------------------------- */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-grid--3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .feature-grid--4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.feature-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid transparent;
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    transition: border-color var(--transition);
+}
+
+.feature-card:hover {
+    border-color: var(--color-brand-gold-line);
+}
+
+.feature-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1rem;
+    border-radius: 14px;
+    background-color: var(--color-brand-gold-soft);
+    color: var(--color-brand-gold-dark);
+    font-size: 1.2rem;
+}
+
+.feature-card__title {
+    margin-bottom: 0.4rem;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.feature-card__text {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--color-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Raqamlar (Biz haqimizda)
+   -------------------------------------------------------------------------- */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1rem;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.stats-grid__value {
+    margin-bottom: 0.4rem;
+    font-size: clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+}
+
+.stats-grid__label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Missiya banneri (quyuq, tekis fon)
+   -------------------------------------------------------------------------- */
+
+.mission-band {
+    padding: 2.25rem 1.5rem;
+    border-radius: var(--radius-card);
+    background-color: #171717;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .mission-band {
+        padding: 4rem 2rem;
+        border-radius: var(--radius-card-lg);
+    }
+}
+
+.mission-band__badge {
+    margin-bottom: 1.25rem;
+}
+
+.mission-band__text {
+    max-width: 56rem;
+    margin: 0 auto 1.25rem;
+    font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+}
+
+.mission-band__attribution {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-brand-gold);
+}
+
+/* --------------------------------------------------------------------------
+   Sahifa sarlavhasi (inner pages)
+   -------------------------------------------------------------------------- */
+
+.page-header {
+    padding-block: 2rem 2.25rem;
+    background-color: #ffffff;
+    border-radius: var(--radius-card);
+}
+
+@media (min-width: 1024px) {
+    .page-header {
+        padding-block: 2.75rem 3rem;
+        border-radius: var(--radius-card-lg);
+    }
+}
+
+.page-header .breadcrumb {
+    margin-bottom: var(--space-4);
+}
+
+.page-header__title {
+    margin-bottom: 0.6rem;
+    font-size: var(--text-3xl);
+}
+
+.page-header__text {
+    max-width: 62ch;
+    color: var(--color-muted);
+}
+
+.page-header__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: var(--space-5);
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+    font-size: var(--text-sm);
+}
+
+.breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--color-muted);
+}
+
+.breadcrumb__item + .breadcrumb__item::before {
+    content: "›";
+    color: var(--color-inactive);
+}
+
+.breadcrumb__link {
+    color: var(--color-muted);
+}
+
+.breadcrumb__link:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+.breadcrumb__current {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Product kartasi (Safia 1:1)
+   -------------------------------------------------------------------------- */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-bg);
+    transition: background-color var(--transition);
+}
+
+@media (min-width: 1024px) {
+    .product-card {
+        padding: 0.625rem;
+        border-radius: var(--radius-card-lg);
+    }
+}
+
+.product-card__media {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: var(--radius-media);
+    background-color: var(--color-card-hover);
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .product-card__media {
+        margin-bottom: 0.625rem;
+    }
+}
+
+.product-card__image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.product-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.product-card:hover .product-card__media img {
+    transform: scale(1.05);
+}
+
+.product-card__badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 2;
+    padding: 0 0.4rem;
+    background: var(--color-brand-gold-gradient);
+    color: var(--color-text);
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+@media (min-width: 1024px) {
+    .product-card__badge {
+        top: 0.75rem;
+        left: 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+.favorite-toggle {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: var(--color-text);
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: color var(--transition-fast), background-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.favorite-toggle:hover {
+    transform: scale(1.06);
+    color: var(--color-brand-gold-ink);
+}
+
+.favorite-toggle.is-active {
+    background-color: var(--color-brand);
+    color: #ffffff;
+}
+
+.product-card__favorite {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 2;
+}
+
+@media (min-width: 1024px) {
+    .product-card__favorite {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+}
+
+.product-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0.375rem 0.375rem 0.5rem;
+}
+
+.product-card__title {
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+@media (min-width: 1024px) {
+    .product-card__title {
+        margin-bottom: 0.625rem;
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+}
+
+.product-card__title a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.product-card__title a:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+.product-card__desc {
+    display: none;
+    margin-bottom: 0.625rem;
+    color: var(--color-inactive);
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .product-card__desc {
+        display: -webkit-box;
+    }
+}
+
+.product-card__footer {
+    margin-top: auto;
+}
+
+.product-card__price {
+    margin: 0 0 0.5rem;
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+@media (min-width: 1024px) {
+    .product-card__price {
+        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+    }
+}
+
+.product-card__btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    height: 48px;
+    padding-inline: 0.75rem;
+    background-color: #ffffff;
+    color: var(--color-text);
+    border: 0;
+    border-radius: var(--radius-media);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+@media (min-width: 1024px) {
+    .product-card__btn-pill {
+        height: 50px;
+        font-size: var(--text-md);
+    }
+}
+
+.product-card__btn-pill:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Kategoriya chip kartasi (gorizontal pill)
+   -------------------------------------------------------------------------- */
+
+.safia-cat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 7.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-card-bg);
+    border: 1px solid transparent;
+    border-radius: var(--radius-card);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: border-color var(--transition), background-color var(--transition);
+}
+
+@media (min-width: 1024px) {
+    .safia-cat-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+        min-width: 15rem;
+        padding: 1rem 1.25rem;
+        border-radius: var(--radius-card-lg);
+    }
+
+    .safia-cat-card__media {
+        order: -1;
+    }
+}
+
+.safia-cat-card:hover {
+    background-color: var(--color-card-hover);
+    border-color: var(--color-brand-gold-line);
+    color: var(--color-text);
+}
+
+.safia-cat-card__media {
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.safia-cat-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.safia-cat-card__title {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: inherit;
+    white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+    .safia-cat-card__title {
+        font-size: var(--text-md);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   News kartasi
+   -------------------------------------------------------------------------- */
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-bg);
+}
+
+@media (min-width: 1024px) {
+    .news-card {
+        padding: 0.625rem;
+        border-radius: var(--radius-card-lg);
+    }
+}
+
+.news-card__media {
+    display: block;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: var(--radius-media);
+    background-color: var(--color-card-hover);
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .news-card__media {
+        margin-bottom: 0.625rem;
+    }
+}
+
+.news-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.news-card:hover .news-card__media img {
+    transform: scale(1.05);
+}
+
+.news-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.375rem 0.375rem 0.5rem;
+}
+
+.news-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-muted);
+    font-size: var(--text-xs);
+}
+
+.news-card__title {
+    font-size: var(--text-lg);
+    line-height: 1.3;
+}
+
+.news-card__title a {
+    color: var(--color-text);
+    transition: color var(--transition-fast);
+}
+
+.news-card__title a:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+.news-card__excerpt {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+}
+
+.news-card__more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    height: 46px;
+    margin-top: auto;
+    background-color: #ffffff;
+    border-radius: var(--radius-media);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.news-card__more:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Filial kartasi
+   -------------------------------------------------------------------------- */
+
+.branch-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    height: 100%;
+    padding: 1.35rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-bg);
+    transition: border-color var(--transition);
+}
+
+.branch-card:hover {
+    border-color: var(--color-brand-gold-line);
+}
+
+.branch-card__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.branch-card__title {
+    font-size: var(--text-lg);
+}
+
+.branch-card__list {
+    display: grid;
+    gap: 0.6rem;
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+}
+
+.branch-card__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.branch-card__list i {
+    margin-top: 0.15rem;
+    color: var(--color-brand-gold-dark);
+}
+
+.branch-card .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Empty state
+   -------------------------------------------------------------------------- */
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: var(--space-7) var(--space-4);
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-bg);
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .empty-state {
+        border-radius: var(--radius-card-lg);
+    }
+}
+
+.empty-state__icon {
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: var(--color-brand-gold-dark);
+    font-size: 1.5rem;
+}
+
+.empty-state__title {
+    font-size: var(--text-xl);
+}
+
+.empty-state__text {
+    max-width: 46ch;
+    color: var(--color-muted);
+}
+
+.empty-state__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Alert
+   -------------------------------------------------------------------------- */
+
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-input);
+    font-size: var(--text-sm);
+}
+
+.alert > i {
+    margin-top: 0.2rem;
+}
+
+.alert p {
+    margin: 0;
+}
+
+.alert ul {
+    margin: 0.35rem 0 0;
+    padding-left: 1.1rem;
+    list-style: disc;
+}
+
+.alert--demo {
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+}
+
+.alert--demo > i {
+    color: var(--color-brand-gold-dark);
+}
+
+.alert--success {
+    background-color: var(--color-success-soft);
+    color: var(--color-success);
+}
+
+.alert--error {
+    background-color: var(--color-danger-soft);
+    color: var(--color-danger);
+}
+
+/* --------------------------------------------------------------------------
+   Formalar
+   -------------------------------------------------------------------------- */
+
+.form-field {
+    display: grid;
+    gap: 0.4rem;
+    margin-bottom: var(--space-4);
+}
+
+.form-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-input);
+    background-color: var(--color-card-bg);
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-brand-gold-line);
+    background-color: #ffffff;
+}
+
+.form-textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-error {
+    color: var(--color-danger);
+    font-size: var(--text-xs);
+}
+
+/* --------------------------------------------------------------------------
+   Miqdor tanlash
+   -------------------------------------------------------------------------- */
+
+.qty-stepper {
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-input);
+    background-color: #ffffff;
+}
+
+.qty-button {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 46px;
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.qty-button:hover {
+    background-color: var(--color-card-bg);
+    color: var(--color-brand-gold-ink);
+}
+
+.qty-input {
+    width: 54px;
+    height: 46px;
+    border: 0;
+    background-color: transparent;
+    font-weight: 600;
+    text-align: center;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.qty-input:focus {
+    outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   Toast
+   -------------------------------------------------------------------------- */
+
+.toast-region {
+    position: fixed;
+    bottom: 1.2rem;
+    left: 50%;
+    z-index: var(--z-toast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: min(92vw, 420px);
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.15rem;
+    border-radius: var(--radius-input);
+    background-color: var(--color-brand);
+    color: #ffffff;
+    font-size: var(--text-sm);
+    box-shadow: var(--shadow-elevated);
+    animation: toast-in 240ms ease;
+}
+
+.toast i {
+    color: var(--color-brand-gold);
+}
+
+.toast.is-leaving {
+    animation: toast-out 200ms ease forwards;
+}
+
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes toast-out {
+    to {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Feature list (brend hikoyasi)
+   -------------------------------------------------------------------------- */
+
+.feature-list {
+    display: grid;
+    gap: var(--space-4);
+    margin-block: var(--space-5);
+}
+
+.feature-list__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.feature-list__icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background-color: var(--color-brand-gold-soft);
+    color: var(--color-brand-gold-dark);
+    font-size: 1.15rem;
+}
+
+.feature-list__item h3 {
+    margin-bottom: 0.15rem;
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: 600;
+}
+
+.feature-list__item p {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Value card (Biz haqimizda)
+   -------------------------------------------------------------------------- */
+
+.value-grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.value-card {
+    padding: 1.4rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-bg);
+    transition: border-color var(--transition);
+}
+
+.value-card:hover {
+    border-color: var(--color-brand-gold-line);
+}
+
+.value-card__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.9rem;
+    border-radius: 14px;
+    background-color: var(--color-brand-gold-soft);
+    color: var(--color-brand-gold-dark);
+    font-size: 1.3rem;
+}
+
+.value-card__title {
+    margin-bottom: 0.4rem;
+    font-size: var(--text-lg);
+}
+
+.value-card__text {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Brend iqtibosi
+   -------------------------------------------------------------------------- */
+
+.brand-quote {
+    max-width: 780px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.brand-quote__text {
+    margin-bottom: 0.8rem;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+}
+
+.brand-quote__author {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+}
+
+/* --------------------------------------------------------------------------
+   CTA band
+   -------------------------------------------------------------------------- */
+
+.cta-band {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius-card);
+    background-color: #171717;
+    color: #ffffff;
+}
+
+@media (min-width: 1024px) {
+    .cta-band {
+        padding: 2.75rem 3rem;
+        border-radius: var(--radius-card-lg);
+    }
+}
+
+.cta-band__title {
+    margin-bottom: 0.4rem;
+    color: #fff;
+    font-size: var(--text-2xl);
+}
+
+.cta-band__text {
+    max-width: 56ch;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.cta-band__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.cta-band .btn--primary {
+    background-color: var(--color-brand-gold);
+    color: var(--color-text);
+}
+
+.cta-band .btn--primary:hover {
+    background-color: #ffffff;
+    color: var(--color-text);
+}
+
+.cta-band .btn--secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.cta-band .btn--secondary:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Kontakt kartalari
+   -------------------------------------------------------------------------- */
+
+.contact-info-grid {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: var(--space-5);
+}
+
+.contact-info-card {
+    padding: 1.35rem;
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-bg);
+}
+
+.contact-info-card__icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.8rem;
+    border-radius: 14px;
+    background-color: var(--color-brand-gold-soft);
+    color: var(--color-brand-gold-dark);
+    font-size: 1.15rem;
+}
+
+.contact-info-card__title {
+    margin-bottom: 0.3rem;
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    font-weight: 600;
+}
+
+.contact-info-card__text {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+    word-break: break-word;
+}
+
+.contact-aside {
+    padding: 1.5rem;
+    border-radius: var(--radius-card);
+    background-color: var(--color-card-bg);
+}
+
+.contact-aside__title {
+    margin-bottom: var(--space-4);
+    font-size: var(--text-xl);
+}
+
+.contact-aside__list {
+    display: grid;
+    gap: 0.7rem;
+    margin-bottom: var(--space-5);
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+}
+
+.contact-aside__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.contact-aside__list i {
+    margin-top: 0.2rem;
+    color: var(--color-brand-gold-dark);
+}
+
+.contact-aside__links {
+    display: grid;
+    gap: 0.6rem;
+    margin-top: var(--space-4);
+}
+
+.contact-aside .btn--secondary,
+.contact-aside .btn--ghost {
+    background-color: #ffffff;
+}
+
+.contact-aside .btn--secondary:hover,
+.contact-aside .btn--ghost:hover {
+    color: var(--color-brand-gold-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Xato sahifasi
+   -------------------------------------------------------------------------- */
+
+.error-page__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 640px;
+    margin-inline: auto;
+    padding-block: var(--space-6);
+    text-align: center;
+}
+
+.error-page__code {
+    margin: 0;
+    color: var(--color-brand-gold-dark);
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 3rem + 8vw, 7rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    opacity: 0.85;
+}
+
+.error-page__title {
+    font-size: var(--text-2xl);
+}
+
+.error-page__text {
+    color: var(--color-muted);
+}
+
+.error-page__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}

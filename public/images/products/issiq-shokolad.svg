@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs>
+<linearGradient id="pishbg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F6F0E5"/><stop offset="1" stop-color="#E9E0CF"/>
+</linearGradient>
+<radialGradient id="pishglow" cx="0.3" cy="0.08" r="1.05">
+<stop offset="0" stop-color="#FFFDF6" stop-opacity="0.85"/>
+<stop offset="0.55" stop-color="#FFFDF6" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="pishvig" cx="0.5" cy="0.52" r="0.85">
+<stop offset="0.55" stop-color="#3A2C1C" stop-opacity="0"/>
+<stop offset="1" stop-color="#3A2C1C" stop-opacity="0.1"/>
+</radialGradient>
+<linearGradient id="pishsd" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0.45" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="pishsh" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
+<stop offset="0.35" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.68" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="pishgl" x1="0.2" y1="0" x2="0.55" y2="1">
+<stop offset="0" stop-color="#FFF6E2"/>
+<stop offset="0.15" stop-color="#EDD3A5"/>
+<stop offset="1" stop-color="#DCBB80"/>
+</linearGradient>
+<filter id="pishsoft" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="16"/>
+</filter>
+<filter id="pishsoft2" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="7"/>
+</filter>
+<filter id="pishnoise">
+<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.3 0.3 0.3 0 0"/>
+</filter>
+</defs>
+<rect width="1200" height="900" fill="url(#pishbg)"/>
+<rect width="1200" height="900" fill="url(#pishglow)"/>
+
+<rect x="0" y="594" width="1200" height="306" fill="#B99B72" opacity="0.2"/>
+<rect x="0" y="594" width="1200" height="3" fill="#8A6D45" opacity="0.14"/>
+<ellipse cx="600" cy="600" rx="744" ry="26" fill="#7A5C39" opacity="0.1" filter="url(#pishsoft)"/>
+<ellipse cx="600" cy="704" rx="220" ry="44" fill="#2E2215" opacity="0.16" filter="url(#pishsoft)"/>
+<g transform="translate(600 600) scale(1.45)">
+<path d="M -74 -84 L 74 -84 L 64 46 Q 0 68 -64 46 Z" fill="#FDFBF6"/>
+<path d="M -74 -84 L 74 -84 L 64 46 Q 0 68 -64 46 Z" fill="url(#pishsh)"/>
+<path d="M 70 -64 C 106 -66 110 -16 70 -10" stroke="#FDFBF6" stroke-width="14" fill="none" stroke-linecap="round"/>
+<path d="M 70 -64 C 106 -66 110 -16 70 -10" stroke="url(#pishsh)" stroke-width="14" fill="none"/>
+<ellipse cx="0" cy="-84" rx="74" ry="19" fill="#EFE9DC"/>
+<ellipse cx="0" cy="-82" rx="62" ry="14" fill="#46301F"/>
+<ellipse cx="0" cy="-80" rx="54" ry="11" fill="#5C3E28"/>
+<rect x="-44" y="-94" width="30" height="22" rx="9" fill="#FDF8EE" transform="rotate(-9 -29 -83)"/>
+<rect x="12" y="-98" width="30" height="22" rx="9" fill="#FBF4E4" transform="rotate(7 27 -87)"/>
+<rect x="-12" y="-99" width="26" height="19" rx="8" fill="#FFFDF6" transform="rotate(-3 -1 -89)"/>
+<ellipse cx="-40" cy="-80" rx="14" ry="5" fill="#7A5236" opacity="0.55"/>
+<ellipse cx="38" cy="-79" rx="12" ry="4.6" fill="#7A5236" opacity="0.45"/>
+<ellipse cx="0" cy="-108" rx="26" ry="5" fill="#3C2A16" opacity="0.08"/>
+</g>
+<g transform="translate(858 688) rotate(22) scale(0.85)">
+<path d="M 0 -22 C 12 -14 12 10 0 22 C -12 10 -12 -14 0 -22 Z" fill="#EAD9B4"/>
+<path d="M 0 -17 C 5 -8 5 6 0 15" stroke="#D6BE8E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+</g>
+<g transform="translate(320 612) rotate(-30) scale(0.8)" opacity="0.95">
+<path d="M 0 60 C 6 30 4 10 0 -10" stroke="#B99A5C" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g transform="translate(0 -22)">
+<path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(0)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(72)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(144)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(216)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(288)"/>
+<circle r="7" fill="#3B2A16"/>
+</g>
+<path d="M -4 22 q -18 -4 -24 -18 q 16 0 24 12 Z" fill="#95A472" opacity="0.9"/>
+<path d="M 4 40 q 18 -2 26 -16 q -18 -2 -26 10 Z" fill="#95A472" opacity="0.75"/>
+</g>
+
+<rect width="1200" height="900" fill="url(#pishvig)"/>
+<rect width="1200" height="900" filter="url(#pishnoise)" opacity="0.12"/>
+</svg>

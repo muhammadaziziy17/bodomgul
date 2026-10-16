@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Bodomgul — moslashuv (mobile-first)
+   ========================================================================== */
+
+@media (min-width: 576px) {
+    .value-grid,
+    .contact-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding-block: var(--space-8);
+    }
+
+    .catalog-toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .story {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-detail {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .cart-layout {
+        grid-template-columns: minmax(0, 1fr) 340px;
+    }
+
+    .contact-layout {
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    }
+
+    .contact-info-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 992px) {
+    .site-nav {
+        display: flex;
+    }
+
+    .value-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Tor ekranlar uchun ixcham header */
+
+@media (max-width: 767px) {
+    .site-header__inner {
+        min-height: 60px;
+        gap: 0.5rem;
+        padding-block: 0.4rem;
+    }
+
+    .brand {
+        font-size: 1.125rem;
+        gap: 0.5rem;
+    }
+
+    .brand__mark {
+        width: 46px;
+        height: 46px;
+    }
+
+    .header-pill-btn {
+        height: 40px;
+        padding-inline: 0.8rem;
+        border-radius: 13px;
+    }
+
+    .header-pill-btn--icon,
+    .header-pill-btn--lang {
+        width: 40px;
+        padding: 0;
+        font-size: 1.05rem;
+    }
+
+    .header-pill-btn__count {
+        min-width: 16px;
+        height: 16px;
+        font-size: 0.62rem;
+    }
+
+    .site-header__actions {
+        gap: 0.3rem;
+    }
+
+    .catalog-sort {
+        justify-content: space-between;
+    }
+
+    .catalog-sort__select {
+        flex: 1;
+    }
+
+    .section-title {
+        align-items: center;
+    }
+
+    .marquee-giant__item {
+        font-size: 2.5rem;
+    }
+
+    .join-band__title {
+        font-size: 2.25rem;
+    }
+
+    .hero-slide__content {
+        padding-bottom: 3.5rem;
+    }
+
+    .join-band__cta {
+        width: 100%;
+    }
+
+    .join-band__cta .btn {
+        width: 100%;
+    }
+}
+
+/* Juda tor ekranlar (320-360px) */
+
+@media (max-width: 380px) {
+    .product-grid,
+    .product-grid-safia,
+    .category-grid,
+    .category-grid-safia {
+        grid-template-columns: 1fr;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}

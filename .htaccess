@@ -1,0 +1,18 @@
+# Bodomgul — InfinityFree (htdocs) uchun kirish sozlamalari.
+#
+# Bu fayl Laravel loyihasi ildizida turadi va barcha web-so'rovlarni
+# public/ katalogi orqali o'tkazadi. Shu tufayli app/, config/, vendor/,
+# storage/, routes/ va .env kabi ichki fayllar URL orqali ochilmaydi.
+#
+# Lokal ishlab chiqishda `php artisan serve` bu fayldan foydalanmaydi.
+
+RewriteEngine On
+
+# So'rov allaqachon public/ ichida bo'lsa, qayta yozilmaydi (loop oldini olish).
+RewriteCond %{REQUEST_URI} !/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Qo'shimcha himoya: maxfiy fayllar to'g'ridan-to'g'ri so'ralsa ham bloklanadi.
+<FilesMatch "^\.env|^composer\.(json|lock)$|^artisan$|^phpunit\.xml$|^package(-lock)?\.json$|^vite\.config\.js$|^boost\.json$">
+    Require all denied
+</FilesMatch>

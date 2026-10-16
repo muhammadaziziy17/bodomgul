@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs>
+<linearGradient id="pqkbg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F6F0E5"/><stop offset="1" stop-color="#E9E0CF"/>
+</linearGradient>
+<radialGradient id="pqkglow" cx="0.3" cy="0.08" r="1.05">
+<stop offset="0" stop-color="#FFFDF6" stop-opacity="0.85"/>
+<stop offset="0.55" stop-color="#FFFDF6" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="pqkvig" cx="0.5" cy="0.52" r="0.85">
+<stop offset="0.55" stop-color="#3A2C1C" stop-opacity="0"/>
+<stop offset="1" stop-color="#3A2C1C" stop-opacity="0.1"/>
+</radialGradient>
+<linearGradient id="pqksd" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0.45" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="pqksh" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
+<stop offset="0.35" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.68" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="pqkgl" x1="0.2" y1="0" x2="0.55" y2="1">
+<stop offset="0" stop-color="#FFF6E2"/>
+<stop offset="0.15" stop-color="#EDD3A5"/>
+<stop offset="1" stop-color="#DCBB80"/>
+</linearGradient>
+<filter id="pqksoft" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="16"/>
+</filter>
+<filter id="pqksoft2" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="7"/>
+</filter>
+<filter id="pqknoise">
+<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.3 0.3 0.3 0 0"/>
+</filter>
+</defs>
+<rect width="1200" height="900" fill="url(#pqkbg)"/>
+<rect width="1200" height="900" fill="url(#pqkglow)"/>
+
+<rect x="0" y="594" width="1200" height="306" fill="#B99B72" opacity="0.2"/>
+<rect x="0" y="594" width="1200" height="3" fill="#8A6D45" opacity="0.14"/>
+<ellipse cx="600" cy="600" rx="744" ry="26" fill="#7A5C39" opacity="0.1" filter="url(#pqksoft)"/>
+<ellipse cx="600" cy="700" rx="240" ry="48" fill="#2E2215" opacity="0.16" filter="url(#pqksoft)"/>
+<g transform="translate(600 652) scale(1.35)">
+<path d="M -70 12 L -54 -56 L 54 -56 L 70 12 Q 0 34 -70 12 Z" fill="#E7D7B5"/>
+<path d="M -70 12 L -54 -56 L 54 -56 L 70 12 Q 0 34 -70 12 Z" fill="url(#pqksd)"/>
+<path d="M -62 -52 L -72 12" stroke="#C9B48C" stroke-width="5" opacity="0.5" stroke-linecap="round"/><path d="M -41.33333333333333 -52 L -48 12" stroke="#C9B48C" stroke-width="5" opacity="0.5" stroke-linecap="round"/><path d="M -20.666666666666664 -52 L -24 12" stroke="#C9B48C" stroke-width="5" opacity="0.5" stroke-linecap="round"/><path d="M 0 -52 L 0 12" stroke="#C9B48C" stroke-width="5" opacity="0.5" stroke-linecap="round"/><path d="M 20.666666666666664 -52 L 24 12" stroke="#C9B48C" stroke-width="5" opacity="0.5" stroke-linecap="round"/><path d="M 41.33333333333333 -52 L 48 12" stroke="#C9B48C" stroke-width="5" opacity="0.5" stroke-linecap="round"/><path d="M 62 -52 L 72 12" stroke="#C9B48C" stroke-width="5" opacity="0.5" stroke-linecap="round"/>
+<path d="M -54 -56 L 54 -56" stroke="#C9B48C" stroke-width="6" opacity="0.55"/>
+<path d="M -64 -44 Q -70 -96 -22 -120 Q 0 -106 4 -92 Q 30 -118 62 -96 Q 76 -66 44 -52 Q 62 -34 44 -18 Q 24 -2 -6 -6 Q -44 -8 -64 -44 Z" fill="#F6EEDE"/>
+<path d="M -64 -44 Q -70 -96 -22 -120 Q 0 -106 4 -92 Q 30 -118 62 -96 Q 76 -66 44 -52 Q 62 -34 44 -18 Q 24 -2 -6 -6 Q -44 -8 -64 -44 Z" fill="url(#pqksd)"/>
+<path d="M -48 -40 Q -10 -26 36 -44" stroke="#D8C49C" stroke-width="4" fill="none" opacity="0.5"/>
+<path d="M -30 -74 Q 0 -58 30 -78" stroke="#D8C49C" stroke-width="4" fill="none" opacity="0.5"/>
+<path d="M -14 -102 Q 8 -90 34 -102" stroke="#D8C49C" stroke-width="4" fill="none" opacity="0.5"/>
+<g transform="translate(0 -136) rotate(-6)">
+<path d="M 0 26 C 30 20 34 -14 0 -34 C -34 -14 -30 20 0 26 Z" fill="#9E4A52"/>
+<path d="M 0 26 C 30 20 34 -14 0 -34 C -34 -14 -30 20 0 26 Z" fill="url(#pqksd)"/>
+<g fill="#F2D8B0" opacity="0.85">
+<circle cx="-10" cy="8" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="12" cy="-2" r="2"/>
+<circle cx="-6" cy="-8" r="2"/><circle cx="8" cy="-16" r="2"/><circle cx="-12" cy="-18" r="2"/>
+</g>
+<ellipse cx="-10" cy="-6" rx="6" ry="9" fill="#FFF" opacity="0.22"/>
+<path d="M 0 -34 q -16 -8 -26 -2 q 8 12 26 4 Z" fill="#95A472"/>
+<path d="M 0 -34 q 16 -8 26 -2 q -8 12 -26 4 Z" fill="#95A472" opacity="0.9"/>
+<path d="M 0 -34 L 0 -48" stroke="#7F9A5E" stroke-width="5" stroke-linecap="round"/>
+</g>
+</g>
+<circle cx="866" cy="690" r="17" fill="#9E4A52"/><circle cx="866" cy="690" r="17" fill="url(#pqksd)"/>
+<ellipse cx="860.9" cy="682.86" rx="5.44" ry="3.4000000000000004" fill="#FFFFFF" opacity="0.4"/>
+<path d="M 866 672.15 q 8.5 -9.350000000000001 16.15 -5.1 q -8.5 8.5 -16.15 5.1 Z" fill="#95A472" opacity="0.9"/>
+<g transform="translate(330 640) rotate(-28) scale(0.8)" opacity="0.95">
+<path d="M 0 60 C 6 30 4 10 0 -10" stroke="#B99A5C" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g transform="translate(0 -22)">
+<path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(0)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(72)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(144)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(216)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(288)"/>
+<circle r="7" fill="#3B2A16"/>
+</g>
+<path d="M -4 22 q -18 -4 -24 -18 q 16 0 24 12 Z" fill="#95A472" opacity="0.9"/>
+<path d="M 4 40 q 18 -2 26 -16 q -18 -2 -26 10 Z" fill="#95A472" opacity="0.75"/>
+</g>
+
+<rect width="1200" height="900" fill="url(#pqkvig)"/>
+<rect width="1200" height="900" filter="url(#pqknoise)" opacity="0.12"/>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="Bodomgul belgisi">
+  <defs>
+    <linearGradient id="petal" x1="0%" y1="0%" x2="30%" y2="100%">
+      <stop offset="0" stop-color="#F1E2BC"/>
+      <stop offset="1" stop-color="#C9A96B"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(48 48)">
+    <g>
+      <path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="url(#petal)" transform="rotate(0)"/>
+      <path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="url(#petal)" transform="rotate(72)"/>
+      <path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="url(#petal)" transform="rotate(144)"/>
+      <path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="url(#petal)" transform="rotate(216)"/>
+      <path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="url(#petal)" transform="rotate(288)"/>
+    </g>
+    <circle r="10.5" fill="#1A1A1A"/>
+    <circle r="4.2" fill="#E4CD96"/>
+    <g fill="#E4CD96">
+      <circle cx="0" cy="-12.5" r="1.7"/>
+      <circle cx="11.9" cy="-3.9" r="1.7"/>
+      <circle cx="7.3" cy="10.1" r="1.7"/>
+      <circle cx="-7.3" cy="10.1" r="1.7"/>
+      <circle cx="-11.9" cy="-3.9" r="1.7"/>
+    </g>
+  </g>
+</svg>

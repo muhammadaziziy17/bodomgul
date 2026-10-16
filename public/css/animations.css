@@ -1,0 +1,605 @@
+/* ==========================================================================
+   Bodomgul — animatsiyalar (Safia Bakery uslubidagi nozik va jonli tajriba)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Scroll-driven reveal (IntersectionObserver uchun)
+   -------------------------------------------------------------------------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.is-revealed,
+.reveal--left.is-revealed,
+.reveal--right.is-revealed,
+.reveal--zoom.is-revealed,
+.is-revealed {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.reveal--left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal--left.is-revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal--right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal--right.is-revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal--zoom {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal--zoom.is-revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Stagger kechikishlari */
+.reveal--delay-1 { transition-delay: 50ms; }
+.reveal--delay-2 { transition-delay: 110ms; }
+.reveal--delay-3 { transition-delay: 170ms; }
+.reveal--delay-4 { transition-delay: 230ms; }
+.reveal--delay-5 { transition-delay: 290ms; }
+.reveal--delay-6 { transition-delay: 350ms; }
+
+/* --------------------------------------------------------------------------
+   Hero karusel: Ken Burns effekti, matn harakati va progress bar
+   -------------------------------------------------------------------------- */
+
+.hero-slide__media {
+    transform: scale(1);
+    transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.swiper-slide-active .hero-slide__media {
+    transform: scale(1.06);
+}
+
+/* Avtomatik o'tish progress taymeri */
+.hero-swiper__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.14);
+    z-index: 15;
+    overflow: hidden;
+}
+
+.hero-swiper__progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--color-brand-gold-gradient);
+}
+
+.hero-swiper__progress-bar.is-animating {
+    width: 100%;
+}
+
+@keyframes heroSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroEyebrowIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+        letter-spacing: 0.22em;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0.14em;
+    }
+}
+
+.hero-slide .hero-slide__eyebrow,
+.hero-slide .hero-slide__title,
+.hero-slide .hero-slide__text,
+.hero-slide .hero-slide__actions {
+    opacity: 1;
+}
+
+.swiper-slide-active .hero-slide__eyebrow {
+    animation: heroEyebrowIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.1s;
+}
+
+.swiper-slide-active .hero-slide__title {
+    animation: heroSlideIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.2s;
+}
+
+.swiper-slide-active .hero-slide__text {
+    animation: heroSlideIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.32s;
+}
+
+.swiper-slide-active .hero-slide__actions {
+    animation: heroSlideIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.44s;
+}
+
+.hero-swiper__btn {
+    transition: transform var(--transition-fast), background-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.hero-swiper__btn:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.hero-swiper__btn:active {
+    transform: scale(0.94);
+}
+
+/* --------------------------------------------------------------------------
+   Mahsulot kartochkasi mikro-animatsiyalari
+   -------------------------------------------------------------------------- */
+
+.product-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.25s ease;
+    will-change: transform, box-shadow;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px -10px rgba(26, 26, 26, 0.09);
+    background-color: #ffffff;
+}
+
+.product-card__media img {
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-card__media img {
+    transform: scale(1.07);
+}
+
+/* "Yangi" badge shimmer nuri */
+@keyframes badgeShimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.product-card__badge {
+    background-size: 200% 200%;
+    animation: badgeShimmer 3.5s ease infinite;
+}
+
+/* Savatga pill tugmasi */
+.product-card__btn-pill {
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.product-card__btn-pill:hover {
+    background-color: var(--color-brand);
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(26, 26, 26, 0.16);
+    transform: translateY(-2px);
+}
+
+.product-card__btn-pill:active {
+    transform: scale(0.95);
+}
+
+.product-card__btn-pill i {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.product-card__btn-pill:hover i {
+    transform: scale(1.18) rotate(8deg);
+}
+
+/* Sevimlilar (heart) */
+.favorite-toggle {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.favorite-toggle:hover {
+    transform: scale(1.15) rotate(-6deg);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-toggle:active {
+    transform: scale(0.9);
+}
+
+/* --------------------------------------------------------------------------
+   Katalog (kategoriya) karusel kartochkalari
+   -------------------------------------------------------------------------- */
+
+.safia-cat-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.safia-cat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-brand-gold-line);
+    background-color: #ffffff;
+    box-shadow: 0 10px 24px -6px rgba(220, 195, 139, 0.24);
+}
+
+.safia-cat-card__media img {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.safia-cat-card:hover .safia-cat-card__media img {
+    transform: scale(1.12) rotate(4deg);
+}
+
+.safia-cat-card:hover .safia-cat-card__title {
+    color: var(--color-brand-gold-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Mobil ilova bo'limi: suzuvchi (float) mockup va tugmalar
+   -------------------------------------------------------------------------- */
+
+@keyframes floatApp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.app-promo__media img {
+    animation: floatApp 4.5s ease-in-out infinite;
+    will-change: transform;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.app-promo__media:hover img {
+    animation-play-state: paused;
+    transform: translateY(-16px) scale(1.02);
+    filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.18));
+}
+
+.app-promo__qr {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.app-promo__qr:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-card-hover);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.app-promo__store {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.app-promo__store:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.app-promo__store i,
+.app-promo__store svg {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.app-promo__store:hover i,
+.app-promo__store:hover svg {
+    transform: scale(1.16);
+}
+
+/* --------------------------------------------------------------------------
+   Mavsumiy promo banneri
+   -------------------------------------------------------------------------- */
+
+.promo-banner {
+    overflow: hidden;
+    position: relative;
+}
+
+.promo-banner__bg {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+.promo-banner:hover .promo-banner__bg {
+    transform: scale(1.04);
+}
+
+/* --------------------------------------------------------------------------
+   "Oilamizda bo'ling" & Afzallik kartalari
+   -------------------------------------------------------------------------- */
+
+.feature-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-brand-gold-line);
+    background-color: #ffffff;
+    box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card__icon {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.feature-card:hover .feature-card__icon {
+    transform: scale(1.14) rotate(6deg);
+    background-color: var(--color-brand-gold);
+    color: #ffffff;
+}
+
+.join-band__avatar {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.join-band__badge:hover .join-band__avatar {
+    transform: scale(1.1) rotate(12deg);
+}
+
+/* --------------------------------------------------------------------------
+   Yangiliklar va Filiallar kartochkalari
+   -------------------------------------------------------------------------- */
+
+.news-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px -8px rgba(0, 0, 0, 0.08);
+}
+
+.news-card__media img {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.news-card:hover .news-card__media img {
+    transform: scale(1.06);
+}
+
+.news-card__more i {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.news-card:hover .news-card__more i {
+    transform: translateX(5px);
+}
+
+.branch-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px -8px rgba(0, 0, 0, 0.07);
+}
+
+.branch-card__list i {
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.branch-card:hover .branch-card__list i {
+    transform: scale(1.2);
+    color: var(--color-brand-gold-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Header, navigatsiya va tugmalar
+   -------------------------------------------------------------------------- */
+
+.site-header {
+    transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.site-header.is-scrolled {
+    box-shadow: 0 14px 34px -4px rgba(20, 16, 12, 0.16),
+        0 4px 12px -2px rgba(20, 16, 12, 0.08);
+    border-bottom-color: rgba(213, 178, 111, 0.45);
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.site-nav__link {
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.site-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-brand-gold);
+    border-radius: 999px;
+    transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        left 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-nav__link:hover::after,
+.site-nav__link.is-active::after {
+    width: 100%;
+    left: 0;
+}
+
+.slab-head__link i,
+.btn i.bi-arrow-right {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.slab-head__link:hover i,
+.btn:hover i.bi-arrow-right {
+    transform: translateX(5px);
+}
+
+.round-btn {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.round-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.round-btn:active,
+.btn.is-pressed,
+.round-btn.is-pressed {
+    transform: scale(0.94) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Mikro-interaksiyalar: Badge bump & heart pop
+   -------------------------------------------------------------------------- */
+
+@keyframes heartPop {
+    0% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(1.3);
+    }
+    70% {
+        transform: scale(0.92);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes countBump {
+    0% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(1.35) translateY(-2px);
+    }
+    70% {
+        transform: scale(0.94);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.header-pill-btn__count.is-bumping {
+    animation: countBump 380ms cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.favorite-toggle.is-popping i {
+    animation: heartPop 380ms cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: prefers-reduced-motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal--left,
+    .reveal--right,
+    .reveal--zoom {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .hero-slide .hero-slide__eyebrow,
+    .hero-slide .hero-slide__title,
+    .hero-slide .hero-slide__text,
+    .hero-slide .hero-slide__actions {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+
+    .hero-slide__media {
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .app-promo__media img {
+        animation: none !important;
+    }
+
+    .header-pill-btn__count.is-bumping,
+    .favorite-toggle.is-popping i,
+    .product-card__badge {
+        animation: none !important;
+    }
+
+    .hero-swiper__progress {
+        display: none !important;
+    }
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="840" viewBox="0 0 720 840">
+<defs>
+<linearGradient id="apbg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F6F0E5"/><stop offset="1" stop-color="#E9E0CF"/>
+</linearGradient>
+<radialGradient id="apglow" cx="0.3" cy="0.08" r="1.05">
+<stop offset="0" stop-color="#FFFDF6" stop-opacity="0.85"/>
+<stop offset="0.55" stop-color="#FFFDF6" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="apvig" cx="0.5" cy="0.52" r="0.85">
+<stop offset="0.55" stop-color="#3A2C1C" stop-opacity="0"/>
+<stop offset="1" stop-color="#3A2C1C" stop-opacity="0.1"/>
+</radialGradient>
+<linearGradient id="apsd" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0.45" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="apsh" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
+<stop offset="0.35" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.68" stop-color="#3C2A16" stop-opacity="0"/>
+<stop offset="1" stop-color="#3C2A16" stop-opacity="0.16"/>
+</linearGradient>
+<linearGradient id="apgl" x1="0.2" y1="0" x2="0.55" y2="1">
+<stop offset="0" stop-color="#FFF6E2"/>
+<stop offset="0.15" stop-color="#EDD3A5"/>
+<stop offset="1" stop-color="#DCBB80"/>
+</linearGradient>
+<filter id="apsoft" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="16"/>
+</filter>
+<filter id="apsoft2" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="7"/>
+</filter>
+<filter id="apnoise">
+<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.3 0.3 0.3 0 0"/>
+</filter>
+</defs>
+<rect width="720" height="840" fill="url(#apbg)"/>
+<rect width="720" height="840" fill="url(#apglow)"/>
+
+<rect x="160" y="60" width="400" height="700" rx="56" fill="#1A1A1A"/>
+<rect x="176" y="76" width="368" height="668" rx="42" fill="#F9F8F6"/>
+<rect x="310" y="92" width="100" height="18" rx="9" fill="#1A1A1A" opacity="0.85"/>
+<circle cx="360" cy="190" r="52" fill="#F3ECDD"/><circle cx="360" cy="190" r="52" fill="url(#apsd)"/>
+<g transform="translate(360 190) scale(0.62)">
+<path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="#DCC38B" transform="rotate(0)"/><path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="#DCC38B" transform="rotate(72)"/><path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="#DCC38B" transform="rotate(144)"/><path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="#DCC38B" transform="rotate(216)"/><path d="M 0,-46 C -9,-34 -10.5,-19 0,-8.5 C 10.5,-19 9,-34 0,-46 Z" fill="#DCC38B" transform="rotate(288)"/>
+<circle r="10.5" fill="#1A1A1A"/>
+</g>
+<rect x="210" y="290" width="300" height="120" rx="22" fill="#FFFFFF"/>
+<rect x="232" y="314" width="88" height="72" rx="16" fill="#F3ECDD"/>
+<rect x="340" y="322" width="140" height="14" rx="7" fill="#DCD5C6"/>
+<rect x="340" y="348" width="104" height="12" rx="6" fill="#E7E1D3"/>
+<rect x="340" y="372" width="70" height="16" rx="8" fill="#DCC38B"/>
+<rect x="210" y="430" width="300" height="120" rx="22" fill="#FFFFFF"/>
+<rect x="232" y="454" width="88" height="72" rx="16" fill="#EFE0C2"/>
+<rect x="340" y="462" width="140" height="14" rx="7" fill="#DCD5C6"/>
+<rect x="340" y="488" width="104" height="12" rx="6" fill="#E7E1D3"/>
+<rect x="340" y="512" width="70" height="16" rx="8" fill="#DCC38B"/>
+<rect x="210" y="590" width="300" height="62" rx="20" fill="#1A1A1A"/>
+<rect x="296" y="612" width="128" height="16" rx="8" fill="#F3ECDD"/>
+<g transform="translate(126 690) scale(1.15)">
+<path d="M -150 -4 Q 0 36 150 -4 Q 116 -62 80 -44 Q 40 -24 8 -46 Q 0 -74 -8 -46 Q -40 -24 -80 -44 Q -116 -62 -150 -4 Z" fill="url(#apgl)"/>
+<path d="M -150 -4 Q 0 36 150 -4 Q 116 -62 80 -44 Q 40 -24 8 -46 Q 0 -74 -8 -46 Q -40 -24 -80 -44 Q -116 -62 -150 -4 Z" fill="url(#apsd)"/>
+<g stroke="#A9763B" stroke-width="5" fill="none" opacity="0.34" stroke-linecap="round">
+<path d="M -40 -28 Q -36 2 -27 15"/>
+<path d="M 40 -28 Q 36 2 27 15"/>
+</g>
+<g stroke="#A9763B" stroke-width="4" fill="none" opacity="0.28" stroke-linecap="round">
+<path d="M -118 -14 Q -132 -26 -142 -34"/>
+<path d="M 118 -14 Q 132 -26 142 -34"/>
+</g>
+<ellipse cx="0" cy="-52" rx="38" ry="10" fill="#FFF3D9" opacity="0.3"/>
+<path d="M -128 -10 Q 0 20 128 -10" stroke="#A9763B" stroke-width="4" fill="none" opacity="0.22" stroke-linecap="round"/>
+
+</g>
+<g transform="translate(626 620) rotate(-10) scale(0.95)">
+<path d="M -47 -10 Q -47 26 0 26 Q 47 26 47 -10 L 47 -14 Q 47 0 0 4 Q -47 0 -47 -14 Z" fill="#F1E0BE"/>
+<path d="M -47 -10 Q -47 26 0 26 Q 47 26 47 -10 L 47 -14 Q 47 0 0 4 Q -47 0 -47 -14 Z" fill="url(#apsd)"/>
+<path d="M -41 -16 Q -41 2 0 2 Q 41 2 41 -16 L 41 -22 Q 41 -6 0 -6 Q -41 -6 -41 -22 Z" fill="#F6EEDE"/>
+<path d="M -39 -6 Q 0 4 39 -6" stroke="#D8C49C" stroke-width="2.6" fill="none" opacity="0.6"/>
+<path d="M -47 -12 Q -47 -52 0 -52 Q 47 -52 47 -12 L 47 -16 Q 47 -6 0 -6 Q -47 -6 -47 -16 Z" fill="#F1E0BE"/>
+<path d="M -47 -12 Q -47 -52 0 -52 Q 47 -52 47 -12 L 47 -20 Q 47 -10 0 -10 Q -47 -10 -47 -20 Z" fill="url(#apsd)"/>
+<path d="M -42 -14 Q -42 -46 0 -46 Q 42 -46 42 -14" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.22"/>
+<ellipse cx="-15" cy="-34" rx="16" ry="6" fill="#FFFFFF" opacity="0.3"/>
+</g>
+<g transform="translate(110 190) rotate(-20) scale(1.2)" opacity="0.95">
+<path d="M 0 60 C 6 30 4 10 0 -10" stroke="#B99A5C" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g transform="translate(0 -22)">
+<path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(0)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(72)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(144)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(216)"/><path d="M 0 0 C -10 -9 -11 -24 0 -33 C 11 -24 10 -9 0 0 Z" fill="#DCC38B" transform="rotate(288)"/>
+<circle r="7" fill="#3B2A16"/>
+</g>
+<path d="M -4 22 q -18 -4 -24 -18 q 16 0 24 12 Z" fill="#95A472" opacity="0.9"/>
+<path d="M 4 40 q 18 -2 26 -16 q -18 -2 -26 10 Z" fill="#95A472" opacity="0.75"/>
+</g>
+
+<rect width="720" height="840" fill="url(#apvig)"/>
+<rect width="720" height="840" filter="url(#apnoise)" opacity="0.12"/>
+</svg>
