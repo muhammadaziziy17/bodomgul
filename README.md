@@ -1,58 +1,121 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Bodomgul 🧁
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Live Demo](https://img.shields.io/badge/demo-bodomgul.page.gd-7E2433)](https://bodomgul.page.gd/uz)
+[![Laravel](https://img.shields.io/badge/Laravel-13-FF2D20?logo=laravel)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net)
+[![Pest](https://img.shields.io/badge/testlar-Pest-56B3B4)](https://pestphp.com)
 
-## About Laravel
+**Bodomgul** — Laravel va Blade asosida qurilgan ko‘p tilli qandolat va novvoyxona sayti. Sayt **portfolio maqsadida** [Safia Bakery](https://safiabakery.uz/uz) saytining sahifa tuzilishi va foydalanuvchi tajribasidan ilhomlanib (klon sifatida) yasalgan.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+🔗 **Jonli demo:** <https://bodomgul.page.gd/uz>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> **Muhim izoh:** Bodomgul — mustaqil portfolio loyihasi. Safia nomi, logotipi, original matnlari, fotosuratlari yoki boshqa himoyalangan materiallari ko‘chirilmagan. Barcha brend elementi, matn, rasm va ma’lumotlar Bodomgul uchun demo sifatida tayyorlangan. Savatcha, sevimlilar va aloqa formasi ham demo rejimida ishlaydi — real to‘lov, buyurtma yoki xabar yuborish yo‘q.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Texnologiyalar
 
-## Learning Laravel
+| Qism | Tanlov |
+|---|---|
+| Backend | Laravel 13, PHP 8.3+ |
+| Templating | Blade (`layouts`, `partials`, `components`) |
+| Frontend | Maxsus CSS (`public/css`) + Vanilla JavaScript (`public/js`), build talab qilinmaydi |
+| Ma’lumotlar bazasi | SQLite (migratsiya va seederlar bilan) |
+| Testlar | Pest |
+| Kod uslubi | Laravel Pint |
+| Deploy | InfinityFree bepul hosting — <https://bodomgul.page.gd/uz> |
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Asosiy imkoniyatlar
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Ommaviy sayt
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- **Bosh sahifa** — hero slider, kategoriya yo‘nalishlari, tavsiya etilgan mahsulotlar, mavsumiy promo banner, yangiliklar, brend hikoyasi va filiallar CTA.
+- **Katalog** — kategoriya bo‘yicha filtr, nom bo‘yicha qidiruv va narx bo‘yicha saralash (Vanilla JS).
+- **Mahsulot sahifasi** — rasm, tavsif, tarkib, miqdor tanlash, savatcha va sevimlilarga qo‘shish, o‘xshash mahsulotlar.
+- **Savatcha va sevimlilar** — `localStorage` asosidagi demo savatcha: miqdorni o‘zgartirish, umumiy summa hisobi va header’dagi counter.
+- **Filiallar** — qidiruv, manzil, ish vaqti, telefon va tashqi xarita havolalari.
+- **Yangiliklar** — ro‘yxat va tafsilot sahifalari.
+- **Biz haqimizda / Karyera / Kontaktlar** — admin panel orqali boshqariladigan sahifalar; validatsiyali demo aloqa formasi.
+- **Ko‘p tillilik** — `/{til}/...` URL tuzilishi (masalan, `/uz/catalog`, `/uz/news`); yangi tillar admin panel orqali qo‘shiladi.
+- Responsive dizayn, 404/500 sahifalar, SEO-friendly slug’lar va throttle bilan himoyalangan formalar.
 
-## Agentic Development
+### Admin panel — `/admin`
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Sayt kontentini to‘liq brauzerdan boshqarish mumkin:
 
-```bash
-composer require laravel/boost --dev
+- **Login** — `throttle` bilan himoyalangan avtorizatsiya.
+- **Dashboard** — mahsulot, kategoriya, yangilik, filial va hero slaydlar statistikasi.
+- **Kontent CRUD** — hero slaydlar, kategoriyalar, mahsulotlar, yangiliklar va filiallar: rasm yuklash, til tablari (ko‘p tilli maydonlar) va faollik toggle.
+- **Tillar boshqaruvi** — til qo‘shish, faollashtirish va asosiy tilni tanlash.
+- **UI tarjimalar** — interfeys matnlarini tahrirlash.
+- **Sahifalar** — «Biz haqimizda», «Kontaktlar» va «Karyera» sahifalari matnini tahrirlash.
+- **Sozlamalar** — sayt nomi, kontakt ma’lumotlari, ijtimoiy tarmoq havolalari va h.k.
 
-php artisan boost:install
+**Demo kirish ma’lumotlari:**
+
+```text
+Email:  admin@bodomgul.test
+Parol:  bodomgul123
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+> Ushbu qiymatlar `.env` faylidagi `ADMIN_EMAIL` va `ADMIN_PASSWORD` orqali o‘zgartiriladi. `php artisan migrate --seed` buyrug‘i admin foydalanuvchini avtomatik yaratadi.
 
-## Contributing
+## O‘rnatish (lokal muhit)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Talablar: PHP 8.3+, Composer.
 
-## Code of Conduct
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Sayt `http://localhost:8000` da ochiladi va asosiy tilga (`/uz`) yo‘naltiradi. Frontend uchun `npm` yoki build qadami kerak emas — CSS/JS fayllari bevosita `public/` katalogidan yuklanadi.
 
-## Security Vulnerabilities
+## Testlar
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan test --compact
+```
 
-## License
+Feature testlar sahifalar, katalog, yangiliklar, aloqa formasi va admin panelni qamrab oladi; unit testlar narx formatlashni tekshiradi.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Kod uslubi
+
+```bash
+vendor/bin/pint --dirty --format agent
+```
+
+## Loyiha tuzilmasi
+
+```text
+app/
+├── Http/Controllers/          # Ommaviy sayt controllerlari
+│   └── Admin/                 # Admin panel controllerlari
+├── Http/Requests/Admin/       # Admin validatsiya so‘rovlari
+├── Models/                    # Product, Category, News, Branch, HeroSlide, Page, Locale, ...
+└── Support/                   # Locales, SiteSettings, ImageUploader, DemoContent, ...
+config/
+└── bodomgul.php               # Demo kontent va admin sozlamalari
+public/
+├── css/                       # Maxsus CSS (variables, base, layout, components, pages, responsive)
+├── js/                        # Vanilla JS (cart, favorites, catalog, branches, hero-slider)
+└── images/                    # Brend, mahsulot, kategoriya va yangilik rasmlari
+resources/views/
+├── layouts/, partials/, components/
+├── admin/                     # Admin panel view’lari
+└── home/, catalog/, products/, branches/, news/, cart/, favorites/, ...
+routes/
+├── web.php                    # Ommaviy sayt (/{locale}/...)
+└── admin.php                  # Admin panel (/admin/...)
+```
+
+## Deploy
+
+Loyiha InfinityFree bepul hostingga deploy qilingan: **<https://bodomgul.page.gd/uz>**
+
+Deploy InfinityFree cheklovlarini hisobga olgan holda amalga oshiriladi: `htdocs/.htaccess` request’larni `public/` katalogiga yo‘naltiradi, `vendor/` lokalda tayyorlanadi, `APP_DEBUG=false` va maxfiy yo‘llar URL orqali ochilmasligi tekshiriladi.
+
+## Litsenziya
+
+Portfolio va o‘quv maqsadida tayyorlangan demo loyiha. Loyiha kodi Laravel ekotizimi qoidalariga (MIT) asoslanadi; Bodomgul brendi va kontenti esa faqat ushbu portfolio demosi uchun xizmat qiladi.
