@@ -571,6 +571,8 @@ it('reflects updated brand and promo settings on the public site', function () {
                 'phone' => '+998 90 000 00 00',
                 'phone_display' => '90 000 00 00',
                 'motto' => 'Yangi shior matni',
+                'about' => 'Yangi qisqa brend tavsifi.',
+                'announcement' => 'Yangi e’lon matni.',
             ],
             'promo' => [
                 'eyebrow' => 'Yangi tanlov',
@@ -589,7 +591,9 @@ it('reflects updated brand and promo settings on the public site', function () {
         ->assertOk()
         ->assertSee('Bodomgul Yangi')
         ->assertSee('Yangi promo sarlavhasi')
-        ->assertSee('Yangi shior matni');
+        ->assertSee('Yangi shior matni')
+        ->assertSee('Yangi qisqa brend tavsifi.')
+        ->assertSee('Yangi e’lon matni.');
 });
 
 it('flashes and returns the save message for ajax saves', function () {

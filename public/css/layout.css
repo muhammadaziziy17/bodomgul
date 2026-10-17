@@ -182,6 +182,10 @@
    Yupqa e'lon lentasi (sahifalarda ishlatilsa)
    -------------------------------------------------------------------------- */
 
+.safia-ticker-wrap {
+    padding-top: 0.75rem;
+}
+
 .safia-ticker {
     overflow: hidden;
     background-color: #ffffff;
@@ -665,6 +669,15 @@
     letter-spacing: -0.015em;
     color: var(--color-text);
     margin-bottom: 1.75rem;
+}
+
+.site-footer__about {
+    max-width: 720px;
+    margin: -0.75rem auto 1.75rem;
+    text-align: center;
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    color: var(--color-muted);
 }
 
 .site-footer__social {

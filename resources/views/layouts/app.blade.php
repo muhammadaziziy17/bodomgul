@@ -35,6 +35,7 @@
     <div class="site-shell">
         <a class="skip-link" href="#main">Asosiy kontentga o‘tish</a>
 
+        @include('partials.announcement-bar')
         @include('partials.header')
 
         <main id="main" class="site-main">

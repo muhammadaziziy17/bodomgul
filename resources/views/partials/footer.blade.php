@@ -11,6 +11,10 @@
             {{ $brand['motto'] ?? '«Qandolatchilik san’atini rivojlantirish orqali, har bir xonadonga bayram shukuhini olib kiramiz»' }}
         </blockquote>
 
+        @if (! empty($brand['about']))
+            <p class="site-footer__about">{{ $brand['about'] }}</p>
+        @endif
+
         <!-- Ijtimoiy tarmoqlar pill tugmalari -->
         <div class="site-footer__social">
             @if (! empty($socialLinks['facebook']))
