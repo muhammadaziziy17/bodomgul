@@ -6,8 +6,8 @@
 @section('content')
     <div class="section-gap">
         <x-page-header
-            title="{{ t('branches.title') }}"
-            description="{{ t('branches.description') }}"
+            :title="t('branches.title')"
+            :description="t('branches.description')"
             :breadcrumbs="[
                 ['label' => t('common.home'), 'url' => route('home')],
                 ['label' => t('branches.title')],
@@ -46,8 +46,8 @@
                 class="catalog-empty"
                 data-branches-empty
                 icon="bi-geo"
-                title="{{ t('branches.empty_title') }}"
-                text="{{ t('branches.empty_text') }}"
+                :title="t('branches.empty_title')"
+                :text="t('branches.empty_text')"
                 hidden
             />
         </div>

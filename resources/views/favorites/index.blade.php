@@ -6,8 +6,8 @@
 @section('content')
     <div class="section-gap">
         <x-page-header
-            title="{{ t('favorites.title') }}"
-            description="{{ t('favorites.description') }}"
+            :title="t('favorites.title')"
+            :description="t('favorites.description')"
             :breadcrumbs="[
                 ['label' => t('common.home'), 'url' => route('home')],
                 ['label' => t('favorites.title')],
@@ -39,8 +39,8 @@
             <x-empty-state
                 data-favorites-empty
                 icon="bi-heart"
-                title="{{ t('favorites.empty_title') }}"
-                text="{{ t('favorites.empty_text_alt') }}"
+                :title="t('favorites.empty_title')"
+                :text="t('favorites.empty_text_alt')"
                 hidden
             >
                 <a class="btn btn--primary" href="{{ route('catalog.index') }}">{{ t('cart.go_catalog') }}</a>

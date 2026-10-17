@@ -12,10 +12,10 @@
             <div class="careers-hero">
                 <div class="careers-hero__copy">
                     <span class="pill-badge pill-badge--white">
-                        {{ $hero['badge'] ?? 'Safia & Bodomgul jamoasi' }}
+                        {{ $hero['badge'] ?? 'Bodomgul jamoasi' }}
                     </span>
                     <h1 class="careers-hero__title">
-                        {{ $hero['title'] ?? 'Safia oilasining bir qismi bo‘ling' }}
+                        {{ $hero['title'] ?? 'Bodomgul oilasining bir qismi bo‘ling' }}
                     </h1>
                     <p class="careers-hero__text">{{ $hero['text'] ?? '' }}</p>
                     <div class="careers-hero__actions">
@@ -140,7 +140,7 @@
                     @if (! empty($content['cta']['telegram_url']))
                         <a href="{{ $content['cta']['telegram_url'] }}" target="_blank" rel="noopener noreferrer" class="btn btn--light">
                             <i class="bi bi-send" aria-hidden="true"></i>
-                            <span>{{ $content['cta']['telegram_label'] ?? '@safia_hr_bot' }}</span>
+                            <span>{{ $content['cta']['telegram_label'] ?? '@bodomgul_hr_bot' }}</span>
                         </a>
                     @endif
                 </div>

@@ -41,13 +41,13 @@ class PageSeeder extends Seeder
                         'image' => 'images/brand/about.svg',
                         'paragraphs' => [
                             'Bizning yo‘limiz oilaviy oshxonadagi iliq xotiralar va mehr bilan pishirilgan shirinliklar iforidan boshlangan. Buvimizning qadimiy retseptlari, bodom va asalning sehrli uyg‘unligi hamda samimiy mehmondo‘stlik bugungi kunda katta qandolatchilik tarmog‘ining asosiy poydevoriga aylandi.',
-                            'Bugun Safia va Bodomgul poytaxtimiz va butun respublika bo‘ylab yuzlab filiallarda har kuni erta tongdan yangi pishirilgan kruassanlar, nozik tortlar, shirin desertlar va xushbo‘y kofe bilan shahar ahlining kunini quvonchga to‘ldirmoqda.',
+                            'Bugun Bodomgul poytaxtimiz va butun respublika bo‘ylab yuzlab filiallarda har kuni erta tongdan yangi pishirilgan kruassanlar, nozik tortlar, shirin desertlar va xushbo‘y kofe bilan shahar ahlining kunini quvonchga to‘ldirmoqda.',
                         ],
                     ],
                     'mission' => [
                         'badge' => 'Bizning missiyamiz',
                         'text' => '«Qandolatchilik san’atini rivojlantirish orqali, har bir xonadonga bayram shukuhini olib kirish, oilalar va do‘stlar davrasiga iliqlik hamda unutilmas shirin damlarni ulashish.»',
-                        'attribution' => 'Safia & Bodomgul Falsafasi',
+                        'attribution' => 'Bodomgul falsafasi',
                     ],
                     'values' => [
                         [
@@ -84,15 +84,15 @@ class PageSeeder extends Seeder
                 'title' => 'Karyera',
                 'content' => [
                     'hero' => [
-                        'badge' => 'Safia & Bodomgul jamoasi',
-                        'title' => 'Safia oilasining bir qismi bo‘ling',
+                        'badge' => 'Bodomgul jamoasi',
+                        'title' => 'Bodomgul oilasining bir qismi bo‘ling',
                         'text' => 'Biz har bir xodimimizning shaxsiy va kasbiy o‘sishini qo‘llab-quvvatlaymiz. Agar siz ham qandolatchilik san’atini sevsangiz va iliq muhitda ishlashni istasangiz, bizning jamoamiz sizni mamnuniyat bilan kutib oladi!',
                         'image' => 'images/brand/team.svg',
                         'badge_text' => '1 200+ xodim',
                     ],
                     'perks' => [
                         'title' => 'Nega aynan biz?',
-                        'subtitle' => 'Safia va Bodomgul jamoasida ishlashning asosiy qulayliklari',
+                        'subtitle' => 'Bodomgul jamoasida ishlashning asosiy qulayliklari',
                         'items' => [
                             [
                                 'icon' => 'bi-graph-up-arrow',
@@ -166,8 +166,8 @@ class PageSeeder extends Seeder
                         'title' => 'Rezyumengiz bormi?',
                         'text' => 'Telegram orqali HR mutaxassisimizga ma’lumotlaringizni yuboring yoki qo‘ng‘iroq qiling. Har bir arizani 24 soat ichida ko‘rib chiqamiz.',
                         'phone_label' => '+998 78 113 40 40',
-                        'telegram_label' => '@safia_hr_bot',
-                        'telegram_url' => 'https://t.me/safia_hr_bot',
+                        'telegram_label' => '@bodomgul_hr_bot',
+                        'telegram_url' => 'https://t.me/bodomgul_hr_bot',
                     ],
                 ],
             ],
@@ -176,7 +176,7 @@ class PageSeeder extends Seeder
                 'title' => 'Kontaktlar & Keytering',
                 'content' => [
                     'description' => 'Savollar, buyurtmalar, banket va keytering xizmati bo‘yicha biz bilan bog‘laning.',
-                    'services_title' => 'Safia & Bodomgul servislari',
+                    'services_title' => 'Bodomgul servislari',
                     'services' => [
                         'Bayram va to‘ylar uchun buyurtma tortlar.',
                         'Korporativ keytering va furshet xizmatlari.',

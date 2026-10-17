@@ -25,7 +25,7 @@ return [
         'hours' => 'Dush-Yak: 08:00 dan 23:00 gacha',
         'announcement' => 'Mobil ilovaga ro\'yxatdan o\'ting va birinchi xaridda kofe sovg\'a oling!',
         'demo_note' => 'Bu sayt Safia Bakery (safiabakery.uz) asosidagi portfolio demosi.',
-        'copyright_note' => 'Safia Cafe & Bakery (Bodomgul Portfolio Clone). Barcha huquqlar himoyalangan.',
+        'copyright_note' => 'Barcha huquqlar himoyalangan.',
     ],
 
     'navigation' => [
@@ -366,7 +366,7 @@ return [
             'district' => 'Yunusobod tumani',
             'address' => 'Amir Temur shoh ko‘chasi 108',
             'hours' => 'Har kuni, 08:00 — 22:00',
-            'phone' => '+998 00 000 00 01',
+            'phone' => '+998 78 113 40 40',
         ],
         [
             'id' => 2,
@@ -374,7 +374,7 @@ return [
             'district' => 'Chilonzor tumani',
             'address' => 'Bunyodkor shoh ko‘chasi 42',
             'hours' => 'Har kuni, 08:00 — 23:00',
-            'phone' => '+998 00 000 00 02',
+            'phone' => '+998 78 113 40 40',
         ],
         [
             'id' => 3,
@@ -382,7 +382,7 @@ return [
             'district' => 'Mirzo Ulug‘bek tumani',
             'address' => 'Universitet ko‘chasi 15',
             'hours' => 'Har kuni, 08:00 — 22:00',
-            'phone' => null,
+            'phone' => '+998 78 113 40 40',
         ],
         [
             'id' => 4,
@@ -390,7 +390,7 @@ return [
             'district' => 'Shayxontohur tumani',
             'address' => 'Zarqaynar ko‘chasi 7',
             'hours' => 'Har kuni, 09:00 — 22:00',
-            'phone' => '+998 00 000 00 04',
+            'phone' => '+998 78 113 40 40',
         ],
         [
             'id' => 5,
@@ -398,7 +398,7 @@ return [
             'district' => 'Yakkasaroy tumani',
             'address' => 'Bobur ko‘chasi 26',
             'hours' => 'Har kuni, 08:00 — 21:00',
-            'phone' => null,
+            'phone' => '+998 78 113 40 40',
         ],
     ],
 

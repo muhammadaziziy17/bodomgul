@@ -42,6 +42,10 @@ trait RespondsToAdminRequests
         array $extra = [],
     ): RedirectResponse|JsonResponse {
         if ($request->expectsJson()) {
+            // AJAX javobdan keyin sahifa yangilanadi — xabar o'sha sahifada
+            // "flash" bildirishnoma sifatida ham ko'rinishi uchun saqlaymiz.
+            session()->flash('status', $message);
+
             return response()->json(array_merge([
                 'ok' => true,
                 'message' => $message,

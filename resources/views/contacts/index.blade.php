@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', t('contacts.title').' — Bodomgul')
+@section('title', $title.' — Bodomgul')
 @section('meta_description', t('contacts.description'))
 
 @section('content')
     <div class="section-gap">
         <x-page-header
-            :title="t('contacts.title')"
+            :title="$title"
             :description="$content['description'] ?? t('contacts.description')"
             :breadcrumbs="[
                 ['label' => t('common.home'), 'url' => route('home')],
-                ['label' => t('contacts.title')],
+                ['label' => $title],
             ]"
         />
     </div>
@@ -137,7 +137,7 @@
                 </div>
 
                 <aside class="contact-aside">
-                    <h2 class="contact-aside__title">{{ $content['services_title'] ?? 'Safia & Bodomgul servislari' }}</h2>
+                    <h2 class="contact-aside__title">{{ $content['services_title'] ?? 'Bodomgul servislari' }}</h2>
                     <ul class="contact-aside__list">
                         @foreach ($content['services'] ?? [] as $service)
                             <li><i class="bi bi-check2" aria-hidden="true"></i> {{ $service }}</li>

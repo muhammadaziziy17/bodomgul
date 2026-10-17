@@ -18,6 +18,9 @@ class LocaleRedirectController extends Controller
 
     /**
      * Noma'lum GET manzillar: /catalog -> /uz/catalog.
+     *
+     * Manzil allaqachon til prefiksi bilan boshlansa (masalan /uz/yoq-sahifa),
+     * qayta yo'naltirish tsikl hosil qiladi — shuning uchun 404 qaytaramiz.
      */
     public function fallback(Request $request): RedirectResponse
     {
@@ -25,6 +28,15 @@ class LocaleRedirectController extends Controller
             abort(404);
         }
 
-        return redirect('/'.Locales::default().'/'.ltrim($request->path(), '/'));
+        $path = ltrim($request->path(), '/');
+        $firstSegment = explode('/', $path, 2)[0];
+
+        if (Locales::exists($firstSegment)) {
+            app()->setLocale($firstSegment);
+
+            abort(404);
+        }
+
+        return redirect('/'.Locales::default().'/'.$path);
     }
 }

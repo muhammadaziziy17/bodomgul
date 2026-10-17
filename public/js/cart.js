@@ -215,7 +215,7 @@
         var itemsWrap = page.querySelector('[data-cart-items]');
         var summary = page.querySelector('[data-cart-summary]');
         var countLabel = page.querySelector('[data-cart-count-text]');
-        var subtotalLabel = page.querySelector('[data-cart-subtotal]');
+        var subtotalLabels = page.querySelectorAll('[data-cart-subtotal]');
 
         if (emptyState) {
             emptyState.hidden = !isEmpty;
@@ -233,9 +233,9 @@
             countLabel.textContent = String(totalQty);
         }
 
-        if (subtotalLabel) {
-            subtotalLabel.textContent = formatSom(subtotal);
-        }
+        subtotalLabels.forEach(function (label) {
+            label.textContent = formatSom(subtotal);
+        });
     }
 
     document.addEventListener('click', function (event) {

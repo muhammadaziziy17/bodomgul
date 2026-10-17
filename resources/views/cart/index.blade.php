@@ -6,8 +6,8 @@
 @section('content')
     <div class="section-gap">
         <x-page-header
-            title="{{ t('cart.title') }}"
-            description="{{ t('cart.description') }}"
+            :title="t('cart.title')"
+            :description="t('cart.description')"
             :breadcrumbs="[
                 ['label' => t('common.home'), 'url' => route('home')],
                 ['label' => t('cart.title')],
@@ -88,8 +88,8 @@
                     <x-empty-state
                         data-cart-empty
                         icon="bi-bag"
-                        title="{{ t('cart.empty_title') }}"
-                        text="{{ t('cart.empty_text') }}"
+                        :title="t('cart.empty_title')"
+                        :text="t('cart.empty_text')"
                         hidden
                     >
                         <a class="btn btn--primary" href="{{ route('catalog.index') }}">{{ t('cart.go_catalog') }}</a>
@@ -102,7 +102,7 @@
                     <dl class="cart-summary__list">
                         <div class="cart-summary__row">
                             <dt>{{ t('cart.items_count') }}</dt>
-                            <dd data-cart-total-items>0 {{ t('cart.items_suffix') }}</dd>
+                            <dd><span data-cart-count-text>0</span> {{ t('cart.items_suffix') }}</dd>
                         </div>
                         <div class="cart-summary__row">
                             <dt>{{ t('cart.subtotal') }}</dt>

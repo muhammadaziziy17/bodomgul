@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', t('about.title').' — Bodomgul')
+@section('title', $title.' — Bodomgul')
 @section('meta_description', $content['description'] ?? t('about.description'))
 
 @section('content')
     <div class="section-gap">
         <x-page-header
-            :title="t('about.title')"
+            :title="$title"
             :description="$content['description'] ?? null"
             :breadcrumbs="[
                 ['label' => t('common.home'), 'url' => route('home')],
-                ['label' => t('about.title')],
+                ['label' => $title],
             ]"
         />
     </div>

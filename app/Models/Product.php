@@ -56,6 +56,18 @@ class Product extends Model
     }
 
     /**
+     * Faqat faol kategoriyaga tegishli mahsulotlar.
+     *
+     * Nofaol qilingan kategoriya mahsulotlari sayt ro'yxatlarida
+     * (katalog, sevimlilar, savatcha, bosh sahifa) ko'rinmaydi.
+     */
+    #[Scope]
+    protected function inActiveCategory(Builder $query): Builder
+    {
+        return $query->whereHas('category', fn (Builder $query): Builder => $query->where('is_active', true));
+    }
+
+    /**
      * Katalog va ro'yxatlar uchun umumiy tartib.
      */
     #[Scope]

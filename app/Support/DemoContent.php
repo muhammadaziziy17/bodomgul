@@ -53,6 +53,7 @@ class DemoContent
     {
         return Product::query()
             ->active()
+            ->inActiveCategory()
             ->listing()
             ->with(['category.translations', 'translations'])
             ->get()
@@ -69,6 +70,7 @@ class DemoContent
     {
         $product = Product::query()
             ->active()
+            ->inActiveCategory()
             ->with(['category.translations', 'translations'])
             ->get()
             ->first(fn (Product $product): bool => $product->tr('slug') === $slug
@@ -84,6 +86,7 @@ class DemoContent
     {
         return Product::query()
             ->active()
+            ->inActiveCategory()
             ->listing()
             ->where('is_featured', true)
             ->with(['category.translations', 'translations'])

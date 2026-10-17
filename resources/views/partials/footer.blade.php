@@ -6,7 +6,7 @@
 
 <footer class="site-footer">
     <div class="container">
-        <!-- Safia Katta Shior -->
+        <!-- Brendning katta shiori -->
         <blockquote class="site-footer__motto">
             {{ $brand['motto'] ?? '«Qandolatchilik san’atini rivojlantirish orqali, har bir xonadonga bayram shukuhini olib kiramiz»' }}
         </blockquote>
@@ -78,7 +78,7 @@
             <div class="site-footer__col site-footer__app-box">
                 <h3 class="site-footer__col-title">{{ t('footer.app_title') }}</h3>
                 <p class="site-footer__app-text">
-                    Ulanish oson: Ilovamizni o'rnatish uchun telefoningiz kamerasini oching yoki do'kondan yuklab oling.
+                    {{ t('footer.app_text') }}
                 </p>
                 <div class="site-footer__app-badges">
                     @if (! empty($appLinks['google_play']))

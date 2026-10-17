@@ -9,8 +9,11 @@ class AboutController extends Controller
 {
     public function index(): View
     {
+        $page = DemoContent::page('about') ?? [];
+
         return view('about.index', [
-            'content' => DemoContent::page('about')['content'] ?? [],
+            'title' => $page['title'] ?? t('about.title'),
+            'content' => $page['content'] ?? [],
         ]);
     }
 }

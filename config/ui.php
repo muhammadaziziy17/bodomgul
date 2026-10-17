@@ -150,7 +150,7 @@ return [
 
         // Yangiliklar
         'news.title' => 'Yangiliklar va aksiyalar',
-        'news.description' => 'Safia va Bodomgul’dagi yangiliklar, mavsumiy kolleksiyalar va e’lonlar.',
+        'news.description' => 'Bodomgul’dagi yangiliklar, mavsumiy kolleksiyalar va e’lonlar.',
         'news.back' => 'Barcha yangiliklar',
         'news.related_eyebrow' => 'Yana o‘qish',
         'news.related_title' => 'Boshqa yangiliklar',
@@ -190,7 +190,7 @@ return [
 
         // Filiallar
         'branches.title' => 'Lokatsiyalar va Filiallar',
-        'branches.description' => 'Toshkent shahridagi Safia & Bodomgul filiallarini toping: manzil, telefon va ish vaqti.',
+        'branches.description' => 'Toshkent shahridagi Bodomgul filiallarini toping: manzil, telefon va ish vaqti.',
         'branches.search_placeholder' => 'Filial nomi, tuman yoki manzil...',
         'branches.search_label' => 'Filial qidirish',
         'branches.found' => ':count ta filial topildi',
@@ -209,7 +209,7 @@ return [
 
         // Karyera
         'careers.title' => 'Karyera',
-        'careers.meta_description' => 'Safia va Bodomgul qandolatchilik tarmog‘ida karyera: ochiq vakansiyalar, do‘stona jamoa, qulay ish sharoitlari.',
+        'careers.meta_description' => 'Bodomgul qandolatchilik tarmog‘ida karyera: ochiq vakansiyalar, do‘stona jamoa, qulay ish sharoitlari.',
         'careers.vacancies_button' => 'Ochiq vakansiyalar',
         'careers.hr_bot' => 'HR Telegram bot',
         'careers.apply' => 'Bog‘lanish',

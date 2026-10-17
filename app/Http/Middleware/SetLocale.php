@@ -35,6 +35,13 @@ class SetLocale
         }
 
         if (! is_string($locale) || ! Locales::exists($locale)) {
+            // Til prefiksi noto'g'ri bo'lsa (masalan /catalog yoki /de/...),
+            // GET so'rovlarni asosiy til prefiksiga yo'naltiramiz.
+            // Aks holda qayta-qayta prefiks qo'shilib ketadigan tsikl paydo bo'ladi.
+            if ($request->isMethod('GET') || $request->isMethod('HEAD')) {
+                return redirect('/'.Locales::default().'/'.ltrim($request->path(), '/'));
+            }
+
             abort(404);
         }
 

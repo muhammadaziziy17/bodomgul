@@ -11,9 +11,12 @@ class ContactController extends Controller
 {
     public function index(): View
     {
+        $page = DemoContent::page('contacts') ?? [];
+
         return view('contacts.index', [
             'brand' => DemoContent::brand(),
-            'content' => DemoContent::page('contacts')['content'] ?? [],
+            'title' => $page['title'] ?? t('contacts.title'),
+            'content' => $page['content'] ?? [],
         ]);
     }
 

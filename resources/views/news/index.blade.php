@@ -6,8 +6,8 @@
 @section('content')
     <div class="section-gap">
         <x-page-header
-            title="{{ t('news.title') }}"
-            description="{{ t('news.description') }}"
+            :title="t('news.title')"
+            :description="t('news.description')"
             :breadcrumbs="[
                 ['label' => t('common.home'), 'url' => route('home')],
                 ['label' => t('news.title')],

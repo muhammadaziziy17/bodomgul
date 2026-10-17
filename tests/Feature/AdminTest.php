@@ -592,6 +592,23 @@ it('reflects updated brand and promo settings on the public site', function () {
         ->assertSee('Yangi shior matni');
 });
 
+it('flashes and returns the save message for ajax saves', function () {
+    $admin = User::factory()->create();
+
+    $this->actingAs($admin)
+        ->putJson(route('admin.settings.update'), [
+            'brand' => ['name' => 'Bodomgul'],
+        ])
+        ->assertOk()
+        ->assertJson(['ok' => true, 'message' => 'Sozlamalar saqlandi.'])
+        ->assertSessionHas('status', 'Sozlamalar saqlandi.');
+
+    // Sahifa yangilanganda yashil bildirishnoma ko'rinadi.
+    $this->get(route('admin.settings.edit'))
+        ->assertOk()
+        ->assertSee('Sozlamalar saqlandi.');
+});
+
 it('refuses to update settings without a brand name', function () {
     $admin = User::factory()->create();
 
@@ -782,7 +799,104 @@ it('updates the about page content shown on the site', function () {
 
     $this->get(route('about'))
         ->assertOk()
+        ->assertSee('<h1 class="page-header__title">Biz haqimizda yangi</h1>', false)
+        ->assertSee('Biz haqimizda yangi</span>', false)
         ->assertSee('Yangi qisqa tavsif matni.')
         ->assertSee('Yangi tarix sarlavhasi')
         ->assertSee('Birinchi xatboshi.');
+});
+
+it('shows the edited contacts page title in the header and breadcrumb', function () {
+    $admin = User::factory()->create();
+
+    $this->actingAs($admin)
+        ->put(route('admin.pages.update', 'contacts'), [
+            'title' => ['uz' => 'Biz bilan bog‘lanish'],
+            'content' => [
+                'uz' => [
+                    'description' => 'Yangi aloqa tavsifi.',
+                ],
+            ],
+        ])
+        ->assertRedirect();
+
+    $this->get(route('contacts'))
+        ->assertOk()
+        ->assertSee('<h1 class="page-header__title">Biz bilan bog‘lanish</h1>', false)
+        ->assertSee('Biz bilan bog‘lanish</span>', false)
+        ->assertSee('Yangi aloqa tavsifi.');
+});
+
+it('opens the careers page form with the existing vacancies and perks', function () {
+    $admin = User::factory()->create();
+
+    $this->actingAs($admin)
+        ->get(route('admin.pages.edit', 'careers'))
+        ->assertOk()
+        ->assertSee('Qandolatchi usta / yordamchi')
+        ->assertSee('data-repeater="content[uz][vacancies][items]"', false)
+        ->assertSee('data-repeater="content[uz][perks][items]"', false);
+});
+
+it('shows the edited careers page vacancies and sections on the site', function () {
+    $admin = User::factory()->create();
+
+    $this->actingAs($admin)
+        ->put(route('admin.pages.update', 'careers'), [
+            'title' => ['uz' => 'Karyera'],
+            'content' => [
+                'uz' => [
+                    'hero' => [
+                        'badge' => 'Yangi yorliq',
+                        'title' => 'Yangi karyera sarlavhasi',
+                        'text' => 'Yangi hero matni.',
+                        'badge_text' => '2 000+ xodim',
+                    ],
+                    'perks' => [
+                        'title' => 'Yangi afzalliklar',
+                        'subtitle' => 'Afzalliklar izohi.',
+                        'items' => [
+                            ['icon' => 'bi-award', 'title' => 'Yangi afzallik', 'text' => 'Afzallik matni.'],
+                        ],
+                    ],
+                    'vacancies' => [
+                        'title' => 'Yangi vakansiyalar',
+                        'subtitle' => 'Vakansiyalar izohi.',
+                        'items' => [
+                            [
+                                'title' => 'Yangi lavozim',
+                                'tag' => 'To‘liq bandlik',
+                                'text' => 'Yangi vazifa matni.',
+                                'location' => 'Toshkent shahri',
+                                'salary' => '9 000 000 so‘m',
+                                'schedule' => '2/2',
+                            ],
+                        ],
+                    ],
+                    'cta' => [
+                        'title' => 'Yangi murojaat',
+                        'text' => 'Murojaat matni.',
+                        'phone_label' => '+998 78 113 40 40',
+                        'telegram_label' => '@bodomgul_hr_bot',
+                        'telegram_url' => 'https://t.me/bodomgul_hr_bot',
+                    ],
+                ],
+            ],
+        ])
+        ->assertRedirect()
+        ->assertSessionHasNoErrors();
+
+    $this->get(route('careers'))
+        ->assertOk()
+        ->assertSee('Yangi yorliq')
+        ->assertSee('Yangi karyera sarlavhasi')
+        ->assertSee('2 000+ xodim')
+        ->assertSee('Yangi afzallik')
+        ->assertSee('Afzallik matni.')
+        ->assertSee('Yangi vakansiyalar')
+        ->assertSee('Yangi lavozim')
+        ->assertSee('Yangi vazifa matni.')
+        ->assertSee('9 000 000 so‘m')
+        ->assertSee('@bodomgul_hr_bot')
+        ->assertSee('Yangi murojaat');
 });

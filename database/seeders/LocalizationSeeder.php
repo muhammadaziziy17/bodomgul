@@ -715,13 +715,13 @@ class LocalizationSeeder extends Seeder
                             'image' => 'images/brand/about.svg',
                             'paragraphs' => [
                                 'Our journey began with warm memories from a family kitchen and the aroma of sweets baked with love. Our grandmother’s old recipes, the magic of almonds and honey, and heartfelt hospitality became the foundation of today’s large confectionery chain.',
-                                'Today, Safia and Bodomgul fill the city with joy every morning — freshly baked croissants, delicate cakes, sweet desserts and fragrant coffee in hundreds of branches across the capital and the whole country.',
+                                'Today, Bodomgul fills the city with joy every morning — freshly baked croissants, delicate cakes, sweet desserts and fragrant coffee in hundreds of branches across the capital and the whole country.',
                             ],
                         ],
                         'mission' => [
                             'badge' => 'Our mission',
                             'text' => '«Through the art of confectionery, to bring the joy of celebration into every home and share warmth and unforgettable sweet moments with family and friends.»',
-                            'attribution' => 'The Safia & Bodomgul philosophy',
+                            'attribution' => 'The Bodomgul philosophy',
                         ],
                         'values' => [
                             ['icon' => 'bi-shield-check', 'title' => 'Honesty and quality', 'text' => 'Only natural, carefully selected ingredients: real butter, fine chocolate and fresh fruit. No artificial additives.'],
@@ -747,13 +747,13 @@ class LocalizationSeeder extends Seeder
                             'image' => 'images/brand/about.svg',
                             'paragraphs' => [
                                 'Наш путь начался с тёплых воспоминаний о семейной кухне и аромате сладостей, испечённых с любовью. Старинные рецепты бабушки, волшебное сочетание миндаля и мёда, искреннее гостеприимство стали основой большой кондитерской сети сегодня.',
-                                'Сегодня Safia и Bodomgul каждое утро наполняют город радостью: свежеиспечённые круассаны, изысканные торты, сладкие десерты и ароматный кофе в сотнях филиалов по столице и всей республике.',
+                                'Сегодня Bodomgul каждое утро наполняет город радостью: свежеиспечённые круассаны, изысканные торты, сладкие десерты и ароматный кофе в сотнях филиалов по столице и всей республике.',
                             ],
                         ],
                         'mission' => [
                             'badge' => 'Наша миссия',
                             'text' => '«Развивая искусство кондитерского дела, приносить радость праздника в каждый дом, делиться теплом и незабываемыми сладкими моментами с семьёй и друзьями.»',
-                            'attribution' => 'Философия Safia & Bodomgul',
+                            'attribution' => 'Философия Bodomgul',
                         ],
                         'values' => [
                             ['icon' => 'bi-shield-check', 'title' => 'Честность и качество', 'text' => 'Только натуральное и отборное сырьё: настоящее сливочное масло, качественный шоколад и свежие фрукты. Без искусственных добавок.'],
@@ -776,15 +776,15 @@ class LocalizationSeeder extends Seeder
                     'title' => 'Careers',
                     'content' => [
                         'hero' => [
-                            'badge' => 'The Safia & Bodomgul team',
-                            'title' => 'Become part of the Safia family',
+                            'badge' => 'The Bodomgul team',
+                            'title' => 'Become part of the Bodomgul family',
                             'text' => 'We support the personal and professional growth of every employee. If you love the art of confectionery and want to work in a warm atmosphere, our team welcomes you with pleasure!',
                             'image' => 'images/brand/team.svg',
                             'badge_text' => '1 200+ employees',
                         ],
                         'perks' => [
                             'title' => 'Why choose us?',
-                            'subtitle' => 'The main benefits of working in the Safia and Bodomgul team',
+                            'subtitle' => 'The main benefits of working in the Bodomgul team',
                             'items' => [
                                 ['icon' => 'bi-graph-up-arrow', 'title' => 'Career growth', 'text' => 'Free training at our academy, master classes with head chefs and fast career advancement.'],
                                 ['icon' => 'bi-clock-history', 'title' => 'Flexible schedule', 'text' => 'Shift schedules suited to students and different lifestyles (day and evening shifts).'],
@@ -807,8 +807,8 @@ class LocalizationSeeder extends Seeder
                             'title' => 'Do you have a CV?',
                             'text' => 'Send your details to our HR specialist via Telegram or give us a call. We review every application within 24 hours.',
                             'phone_label' => '+998 78 113 40 40',
-                            'telegram_label' => '@safia_hr_bot',
-                            'telegram_url' => 'https://t.me/safia_hr_bot',
+                            'telegram_label' => '@bodomgul_hr_bot',
+                            'telegram_url' => 'https://t.me/bodomgul_hr_bot',
                         ],
                     ],
                 ],
@@ -816,15 +816,15 @@ class LocalizationSeeder extends Seeder
                     'title' => 'Карьера',
                     'content' => [
                         'hero' => [
-                            'badge' => 'Команда Safia & Bodomgul',
-                            'title' => 'Станьте частью семьи Safia',
+                            'badge' => 'Команда Bodomgul',
+                            'title' => 'Станьте частью семьи Bodomgul',
                             'text' => 'Мы поддерживаем личностный и профессиональный рост каждого сотрудника. Если вы тоже любите кондитерское искусство и хотите работать в тёплой атмосфере — наша команда с радостью ждёт вас!',
                             'image' => 'images/brand/team.svg',
                             'badge_text' => '1 200+ сотрудников',
                         ],
                         'perks' => [
                             'title' => 'Почему именно мы?',
-                            'subtitle' => 'Главные преимущества работы в команде Safia и Bodomgul',
+                            'subtitle' => 'Главные преимущества работы в команде Bodomgul',
                             'items' => [
                                 ['icon' => 'bi-graph-up-arrow', 'title' => 'Профессиональный рост', 'text' => 'Бесплатные тренинги в нашей академии, мастер-классы от шеф-кондитеров и быстрое продвижение.'],
                                 ['icon' => 'bi-clock-history', 'title' => 'Удобный график', 'text' => 'Гибкий сменный график, подходящий студентам и разному ритму жизни (дневные и вечерние смены).'],
@@ -847,8 +847,8 @@ class LocalizationSeeder extends Seeder
                             'title' => 'У вас есть резюме?',
                             'text' => 'Отправьте свои данные нашему HR-специалисту через Telegram или позвоните нам. Каждую заявку мы рассматриваем в течение 24 часов.',
                             'phone_label' => '+998 78 113 40 40',
-                            'telegram_label' => '@safia_hr_bot',
-                            'telegram_url' => 'https://t.me/safia_hr_bot',
+                            'telegram_label' => '@bodomgul_hr_bot',
+                            'telegram_url' => 'https://t.me/bodomgul_hr_bot',
                         ],
                     ],
                 ],
@@ -859,7 +859,7 @@ class LocalizationSeeder extends Seeder
                     'title' => 'Contacts & Catering',
                     'content' => [
                         'description' => 'Contact us with questions, orders, banquets and catering services.',
-                        'services_title' => 'Safia & Bodomgul services',
+                        'services_title' => 'Bodomgul services',
                         'services' => [
                             'Custom cakes for holidays and weddings.',
                             'Corporate catering and buffet services.',
@@ -873,7 +873,7 @@ class LocalizationSeeder extends Seeder
                     'title' => 'Контакты и кейтеринг',
                     'content' => [
                         'description' => 'Свяжитесь с нами по вопросам заказов, банкетов и кейтеринга.',
-                        'services_title' => 'Услуги Safia & Bodomgul',
+                        'services_title' => 'Услуги Bodomgul',
                         'services' => [
                             'Торты на заказ для праздников и свадеб.',
                             'Корпоративный кейтеринг и фуршетные услуги.',
@@ -900,7 +900,7 @@ class LocalizationSeeder extends Seeder
                 'brand.announcement' => 'Sign up for the mobile app and get a free coffee on your first purchase!',
                 'brand.hours' => 'Mon–Sun: 08:00 to 23:00',
                 'brand.address' => 'Tashkent city (demo address)',
-                'brand.copyright_note' => 'Safia Cafe & Bakery (Bodomgul Portfolio Clone). All rights reserved.',
+                'brand.copyright_note' => 'All rights reserved.',
                 'promo.eyebrow' => 'Seasonal offer',
                 'promo.title' => 'Almond and cinnamon — the warmest flavours of autumn',
                 'promo.text' => 'The seasonal collection features almond croissant, cinnamon roll and almond latte. Make the autumn table sweet.',
@@ -913,7 +913,7 @@ class LocalizationSeeder extends Seeder
                 'brand.announcement' => 'Зарегистрируйтесь в мобильном приложении и получите кофе в подарок при первой покупке!',
                 'brand.hours' => 'Пн–Вс: с 08:00 до 23:00',
                 'brand.address' => 'город Ташкент (демо-адрес)',
-                'brand.copyright_note' => 'Safia Cafe & Bakery (Bodomgul Portfolio Clone). Все права защищены.',
+                'brand.copyright_note' => 'Все права защищены.',
                 'promo.eyebrow' => 'Сезонное предложение',
                 'promo.title' => 'Миндаль и корица — самые тёплые вкусы осени',
                 'promo.text' => 'В сезонной коллекции — миндальный круассан, синабон и миндальный латте. Сделайте осенний стол сладким.',
@@ -1036,7 +1036,7 @@ class LocalizationSeeder extends Seeder
                 'product.related_subtitle' => 'More sweets in the :category category',
 
                 'news.title' => 'News & offers',
-                'news.description' => 'News, seasonal collections and announcements from Safia and Bodomgul.',
+                'news.description' => 'News, seasonal collections and announcements from Bodomgul.',
                 'news.back' => 'All news',
                 'news.related_eyebrow' => 'Read more',
                 'news.related_title' => 'Other news',
@@ -1073,7 +1073,7 @@ class LocalizationSeeder extends Seeder
                 'favorites.empty_text' => 'Mark the products you like in the catalog — they will be saved here.',
 
                 'branches.title' => 'Locations and branches',
-                'branches.description' => 'Find Safia & Bodomgul branches in Tashkent: address, phone and working hours.',
+                'branches.description' => 'Find Bodomgul branches in Tashkent: address, phone and working hours.',
                 'branches.search_placeholder' => 'Branch name, district or address...',
                 'branches.search_label' => 'Search branches',
                 'branches.found' => ':count branches found',
@@ -1090,7 +1090,7 @@ class LocalizationSeeder extends Seeder
                 'about.values_subtitle' => 'The principles behind everything we do and make',
 
                 'careers.title' => 'Careers',
-                'careers.meta_description' => 'Careers at the Safia and Bodomgul confectionery chain: open positions, a friendly team, comfortable working conditions.',
+                'careers.meta_description' => 'Careers at the Bodomgul confectionery chain: open positions, a friendly team, comfortable working conditions.',
                 'careers.vacancies_button' => 'Open positions',
                 'careers.hr_bot' => 'HR Telegram bot',
                 'careers.apply' => 'Contact',
@@ -1252,7 +1252,7 @@ class LocalizationSeeder extends Seeder
                 'product.related_subtitle' => 'Другие сладости из категории :category',
 
                 'news.title' => 'Новости и акции',
-                'news.description' => 'Новости, сезонные коллекции и объявления Safia и Bodomgul.',
+                'news.description' => 'Новости, сезонные коллекции и объявления Bodomgul.',
                 'news.back' => 'Все новости',
                 'news.related_eyebrow' => 'Читать ещё',
                 'news.related_title' => 'Другие новости',
@@ -1289,7 +1289,7 @@ class LocalizationSeeder extends Seeder
                 'favorites.empty_text' => 'Отметьте понравившиеся продукты в каталоге — они сохранятся здесь.',
 
                 'branches.title' => 'Локации и филиалы',
-                'branches.description' => 'Найдите филиалы Safia & Bodomgul в Ташкенте: адрес, телефон и часы работы.',
+                'branches.description' => 'Найдите филиалы Bodomgul в Ташкенте: адрес, телефон и часы работы.',
                 'branches.search_placeholder' => 'Название филиала, район или адрес...',
                 'branches.search_label' => 'Поиск филиалов',
                 'branches.found' => 'найдено :count филиалов',
@@ -1306,7 +1306,7 @@ class LocalizationSeeder extends Seeder
                 'about.values_subtitle' => 'Принципы, лежащие в основе каждого нашего дела и продукта',
 
                 'careers.title' => 'Карьера',
-                'careers.meta_description' => 'Карьера в кондитерской сети Safia и Bodomgul: открытые вакансии, дружная команда, комфортные условия.',
+                'careers.meta_description' => 'Карьера в кондитерской сети Bodomgul: открытые вакансии, дружная команда, комфортные условия.',
                 'careers.vacancies_button' => 'Открытые вакансии',
                 'careers.hr_bot' => 'HR Telegram-бот',
                 'careers.apply' => 'Связаться',

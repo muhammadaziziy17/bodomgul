@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\UiTranslation;
+use App\Support\Ui;
+
 dataset('static pages', [
     'home' => ['home', 'Sevimli mahsulotlar'],
     'catalog' => ['catalog.index', 'Barchasi'],
@@ -60,4 +63,89 @@ it('renders the brand logo and animation stylesheet in the layout', function () 
         ->assertSee('images/brand/logo-navbar.png')
         ->assertSee('favicon.png')
         ->assertSee('css/animations.css');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Til prefiksisiz va noma'lum manzillar
+|--------------------------------------------------------------------------
+*/
+
+it('redirects unknown paths without a locale prefix to the default locale', function () {
+    $this->get('/not-found')->assertRedirect('/uz/not-found');
+});
+
+it('redirects locale-less paths of existing pages to the default locale', function () {
+    $this->get('/catalog')->assertRedirect('/uz/catalog');
+});
+
+it('returns a 404 page instead of redirecting unknown paths inside a locale prefix', function () {
+    $this->get('/uz/not-found')->assertNotFound();
+    $this->get('/uz/uz/not-found')->assertNotFound();
+});
+
+it('renders the 404 page in the requested locale', function () {
+    $this->get('/en/not-found')
+        ->assertNotFound()
+        ->assertSee('Sorry, this page was not found');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Interfeys matnlari va demo kontent
+|--------------------------------------------------------------------------
+*/
+
+it('renders the cart summary hooks expected by the cart script', function () {
+    $this->get(route('cart.index'))
+        ->assertOk()
+        ->assertSee('data-cart-count-text', false)
+        ->assertSee('data-cart-subtotal', false);
+});
+
+it('escapes ampersands in interface text exactly once', function () {
+    UiTranslation::query()->updateOrCreate(
+        ['locale' => 'uz', 'key' => 'branches.description'],
+        ['value' => 'Bodomgul & Bodomgul filiallari'],
+    );
+
+    Ui::flush();
+
+    $this->get('/uz/branches')
+        ->assertOk()
+        ->assertSee('Bodomgul &amp; Bodomgul filiallari', false)
+        ->assertDontSee('&amp;amp;', false);
+});
+
+it('does not leak the reference brand into the demo content', function (string $path) {
+    $response = $this->get($path)->assertOk();
+
+    foreach (['Safia & Bodomgul', 'Safia va Bodomgul', 'Safia oilasining', 'safia_hr_bot'] as $needle) {
+        $response->assertDontSee($needle);
+    }
+})->with([
+    '/uz',
+    '/uz/about',
+    '/uz/careers',
+    '/uz/contacts',
+    '/uz/branches',
+    '/en/about',
+    '/en/careers',
+    '/en/contacts',
+    '/en/branches',
+    '/ru/about',
+    '/ru/careers',
+    '/ru/contacts',
+]);
+
+it('shows real branch phones instead of placeholder numbers', function () {
+    $this->get('/uz/branches')
+        ->assertOk()
+        ->assertSee('+998 78 113 40 40')
+        ->assertDontSee('+998 00 000 00');
+});
+
+it('renders the footer app text in the current locale', function () {
+    $this->get('/en')->assertOk()->assertSee('Easy to connect');
+    $this->get('/ru')->assertOk()->assertSee('Подключиться просто');
 });

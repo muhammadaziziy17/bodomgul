@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Support\DemoContent;
 
 it('renders a category page with only that category’s products', function () {
@@ -46,4 +47,31 @@ it('never includes the product itself in related products', function () {
     expect($relatedSlugs)->not->toContain($product['slug'])
         ->and($relatedSlugs)->toHaveCount(4)
         ->and($relatedSlugs)->toEqual(array_unique($relatedSlugs));
+});
+
+it('hides products of an inactive category from the whole public site', function () {
+    $category = Category::query()->whereSlug('tortlar', 'uz')->first();
+    $product = DemoContent::product('bodomli-tort');
+
+    $category->update(['is_active' => false]);
+
+    $this->get(route('catalog.index'))
+        ->assertOk()
+        ->assertDontSee($product['slug'], false);
+
+    $this->get(route('home'))
+        ->assertOk()
+        ->assertDontSee($product['slug'], false);
+
+    $this->get(route('products.show', ['product' => $product['slug']]))
+        ->assertNotFound();
+
+    // Kategoriya qayta faollashtirilsa, mahsulot yana ko'rinadi.
+    $category->update(['is_active' => true]);
+
+    $this->get(route('catalog.index'))
+        ->assertOk()
+        ->assertSee($product['slug'], false);
+
+    $this->get(route('products.show', ['product' => $product['slug']]))->assertOk();
 });

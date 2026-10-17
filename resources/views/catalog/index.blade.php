@@ -69,8 +69,8 @@
                 class="catalog-empty"
                 data-catalog-empty
                 icon="bi-search"
-                title="{{ t('catalog.empty_title') }}"
-                text="{{ t('catalog.empty_text') }}"
+                :title="t('catalog.empty_title')"
+                :text="t('catalog.empty_text')"
                 hidden
             >
                 <button type="button" class="btn btn--secondary" data-catalog-clear>{{ t('catalog.clear_filters') }}</button>

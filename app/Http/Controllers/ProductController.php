@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function show(Product $product): View
     {
-        abort_unless($product->is_active, 404);
+        abort_unless($product->is_active && $product->category?->is_active, 404);
 
         $productData = DemoContent::productToArray($product);
 
