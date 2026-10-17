@@ -838,6 +838,7 @@ it('opens the careers page form with the existing vacancies and perks', function
         ->get(route('admin.pages.edit', 'careers'))
         ->assertOk()
         ->assertSee('Qandolatchi usta / yordamchi')
+        ->assertSee('name="title[uz]"', false)
         ->assertSee('data-repeater="content[uz][vacancies][items]"', false)
         ->assertSee('data-repeater="content[uz][perks][items]"', false);
 });
@@ -847,7 +848,7 @@ it('shows the edited careers page vacancies and sections on the site', function 
 
     $this->actingAs($admin)
         ->put(route('admin.pages.update', 'careers'), [
-            'title' => ['uz' => 'Karyera'],
+            'title' => ['uz' => 'Karyera yangi'],
             'content' => [
                 'uz' => [
                     'hero' => [
@@ -892,6 +893,7 @@ it('shows the edited careers page vacancies and sections on the site', function 
 
     $this->get(route('careers'))
         ->assertOk()
+        ->assertSee('<title>Karyera yangi — Bodomgul</title>', false)
         ->assertSee('Yangi yorliq')
         ->assertSee('Yangi karyera sarlavhasi')
         ->assertSee('2 000+ xodim')

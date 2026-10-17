@@ -1,5 +1,25 @@
 <div class="a-card">
     <div class="a-card__head">
+        <h2>Sahifa sarlavhasi</h2>
+        <p class="a-card__hint">Brauzer yorlig'i va SEO sarlavhasi uchun (H1 — «Yuqori blok»dagi sarlavha).</p>
+    </div>
+
+    @foreach (\App\Support\Locales::all() as $locale)
+        <div class="a-locale-pane" data-locale-pane="{{ $locale->code }}" @if (! $loop->first) hidden @endif>
+            <div class="a-grid">
+                <x-admin.input
+                    name="title[{{ $locale->code }}]"
+                    label="Sahifa sarlavhasi"
+                    :value="$titles[$locale->code] ?? ''"
+                    :required="$locale->is_default"
+                />
+            </div>
+        </div>
+    @endforeach
+</div>
+
+<div class="a-card">
+    <div class="a-card__head">
         <h2>Yuqori blok</h2>
     </div>
 

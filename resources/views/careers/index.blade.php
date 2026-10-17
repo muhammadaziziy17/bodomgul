@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', t('careers.title').' — Bodomgul')
+@section('title', $title.' — Bodomgul')
 @section('meta_description', t('careers.meta_description'))
 
 @php($hero = $content['hero'] ?? [])

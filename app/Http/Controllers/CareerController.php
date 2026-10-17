@@ -9,8 +9,11 @@ class CareerController extends Controller
 {
     public function index(): View
     {
+        $page = DemoContent::page('careers') ?? [];
+
         return view('careers.index', [
-            'content' => DemoContent::page('careers')['content'] ?? [],
+            'title' => $page['title'] ?? t('careers.title'),
+            'content' => $page['content'] ?? [],
         ]);
     }
 }
